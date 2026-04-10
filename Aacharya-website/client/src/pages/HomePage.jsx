@@ -72,10 +72,15 @@ export default function HomePage() {
                                 bgColor="transparent"
                             />
                         </div>
-                        <p className="hero-subtitle animate-in" style={{ animationDelay: '0.2s' }}>
-                            Gain instant clarity on your career, relationships, and destiny with
-                            precision Vedic astrology readings powered by advanced AI.
-                        </p>
+                        <div className="hero-message animate-in" style={{ animationDelay: '0.2s' }}>
+                            <p className="hero-message-lead">
+                                India&apos;s Most Trusted Vedic Astrologer for Life &amp; Business Decisions
+                            </p>
+                            <p className="hero-message-body">
+                                Gain clarity on your career, relationships &amp; future with precise astrology
+                                insights.
+                            </p>
+                        </div>
                         <p className="hero-authority animate-in" style={{ animationDelay: '0.24s' }}>
                             Trusted by 500+ Business Leaders, Celebrities & Government Officials
                         </p>
@@ -113,9 +118,6 @@ export default function HomePage() {
                 <div className="container">
                     <div className="authority-top-row">
                         <h2 className="section-title authority-title">Authority & Social Proof</h2>
-                        <div className="authority-top-globe">
-                            <CobeGlobe />
-                        </div>
                     </div>
                     <div className="authority-featured">
                         <div className="authority-featured-image-wrap">
