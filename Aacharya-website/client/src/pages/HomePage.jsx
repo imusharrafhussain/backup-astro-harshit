@@ -26,6 +26,10 @@ import marqueeTusharKapoor from '../assets/marquee_tushar_kapoor.png'
 import marqueeDaisyShah from '../assets/marquee_daisy_shah.png'
 import marqueeBhagyashree from '../assets/marquee_bhagyashree.png'
 import marqueeAnchalMunjal from '../assets/marquee_anchal_munjal.png'
+import cardLiveConsultation from '../assets/card_live_consultation.jpeg'
+import cardFaceReading from '../assets/card_face_reading.jpeg'
+import cardPalmistry from '../assets/card_palmistry.jpeg'
+import cardNumerology from '../assets/card_numerology.jpeg'
 import './HomePage.css'
 
 export default function HomePage() {
@@ -159,46 +163,94 @@ export default function HomePage() {
         focusFeatures[(focusStartIndex + i) % focusFeatures.length]
     )
 
+    const mediaTabData = [
+        {
+            id: 'awards-summit',
+            label: 'International Brilliance Awards Summit 2024',
+            featured: true,
+            content: {
+                heading: 'International Brilliance Awards Summit 2024',
+                body: 'Dr. Kunwar Harshit Rajveer was honoured at the prestigious International Brilliance Awards Summit 2024 — one of India\'s most celebrated recognition platforms for trailblazers in astrology, wellness, and spiritual guidance. This accolade recognises his decade-long dedication to delivering precise, life-changing Vedic astrology consultations to leaders across industries.',
+                tags: ['Award Winner', 'Vedic Astrology', '2024', 'Leadership'],
+            },
+        },
+        {
+            id: 'national-tv',
+            label: 'National TV',
+            featured: false,
+            content: {
+                heading: 'National TV Appearances',
+                body: 'Dr. Harshit Rajveer has graced several leading national television channels as a distinguished astrology expert. His in-depth analysis on planetary movements, celebrity birth charts, and upcoming cosmic events has earned him widespread recognition as one of India\'s most trusted on-screen astrologers.',
+                tags: ['Television', 'Expert Panelist', 'Prime Time', 'Media'],
+            },
+        },
+        {
+            id: 'leadership-summit',
+            label: 'Leadership Summit',
+            featured: false,
+            content: {
+                heading: 'Leadership Summit',
+                body: 'As a keynote speaker at multiple Leadership Summits across India, Dr. Harshit Rajveer bridges the world of ancient Vedic wisdom with modern leadership strategy. Business executives, entrepreneurs, and policymakers attend his sessions to gain clarity on timing key decisions using astrological insights.',
+                tags: ['Keynote Speaker', 'Business', 'Strategy', 'Vedic Wisdom'],
+            },
+        },
+        {
+            id: 'astrology-awards',
+            label: 'Astrology Awards',
+            featured: false,
+            content: {
+                heading: 'Astrology Awards',
+                body: 'Recognised by multiple astrology bodies and institutions, Dr. Harshit Rajveer has received numerous awards celebrating excellence in Vedic astrology, kundali analysis, and predictive accuracy. These honours reflect the trust and gratitude of over 500+ clients he has guided through pivotal life decisions.',
+                tags: ['Recognised Expert', 'Vedic Science', 'Kundali', 'Excellence'],
+            },
+        },
+        {
+            id: 'entrepreneur-forum',
+            label: 'Entrepreneur Forum',
+            featured: false,
+            content: {
+                heading: 'Entrepreneur Forum',
+                body: 'At leading Entrepreneur Forums and startup conclave events, Dr. Harshit Rajveer has shared how astrology can help founders choose auspicious timings for launches, partnerships, and funding rounds. His unique blend of ancient knowledge and modern business application has made him a sought-after advisor in entrepreneurial circles.',
+                tags: ['Startups', 'Business Timing', 'Muhurat', 'Founders'],
+            },
+        },
+    ]
+
+    const [activeMediaTab, setActiveMediaTab] = useState('awards-summit')
+    const activeTab = mediaTabData.find((t) => t.id === activeMediaTab)
+
     const authorityLinearGalleryItems = [
         {
             id: 1,
-            url: {
-                src: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-            },
+            url: { src: cardLiveConsultation },
             title: 'Get 1-on-1 Live Consultation',
             description:
-                'Immerse yourself in our cutting-edge interactive gallery, designed to showcase a diverse array of visual content with unparalleled clarity and style. This feature allows users to effortlessly navigate through high-resolution images, from awe-inspiring landscapes to intimate portraits and abstract art. With smooth transitions, intuitive controls, and responsive design, our gallery adapts to any device, ensuring a seamless browsing experience. Dive deeper into each piece with expandable information panels, offering insights into the artist, technique, and story behind each image.',
-            tags: ['Sunrise', 'Mountains', 'Golden', 'Scenic', 'Inspiring'],
+                'Connect directly with Dr. Kunwar Harshit Rajveer for a personalised one-on-one live consultation. Get precise guidance on career, relationships, health, and major life decisions using authentic Vedic astrology, tailored specifically to your birth chart.',
+            tags: ['Live Session', 'Vedic Astrology', 'Personalised', 'Birth Chart'],
         },
         {
             id: 2,
-            url: {
-                src: 'https://images.unsplash.com/photo-1632395627760-72e6eca7f9c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE5fHx0ZWNobm9sb2d5JTIwcGxhbmV0fGVufDB8fDB8fHww',
-            },
+            url: { src: cardFaceReading },
             title: 'Face Reading',
             description:
-                'Embark on a virtual journey around the world with our state-of-the-art 3D globe feature. This interactive marvel allows users to explore geographical data, global trends, and worldwide connections with unprecedented ease and detail. Spin the globe with a flick of your mouse, zoom into street-level views, or soar high for a continental perspective. Our globe section integrates real-time data feeds, showcasing everything from climate patterns and population densities to economic indicators and cultural hotspots. Customizable layers let you focus on specific data sets, while intuitive tooltips provide in-depth information at every turn.',
-            tags: ['Misty', 'Path', 'Mysterious', 'Serene', 'Rugged'],
+                'Discover what your facial features reveal about your destiny. Dr. Harshit Rajveer\'s face reading service decodes personality traits, health indicators, and future possibilities through the ancient science of Samudrik Shastra.',
+            tags: ['Samudrik Shastra', 'Personality', 'Destiny', 'Ancient Science'],
         },
         {
             id: 3,
-            url: {
-                src: 'https://images.unsplash.com/photo-1749680776469-77aae06bc299?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-            },
+            url: { src: cardPalmistry },
             title: 'Palmistry',
             description:
-                'Transform your browsing experience with our mesmerizing Image Mouse Trail feature. As you move your cursor across the screen, watch in wonder as a trail of carefully curated images follows in its wake, creating a dynamic and engaging visual spectacle. This innovative feature goes beyond mere aesthetics; it is an interactive showcase of your content, products, or artwork. Each image in the trail can be clickable, leading to detailed views or related content, turning casual mouse movements into opportunities for discovery.',
-            tags: ['Pathway', 'Adventure', 'Peaks', 'Challenging', 'Breathtaking'],
+                'Your palm holds the map of your life. Through detailed palmistry analysis, Dr. Harshit Rajveer reads the lines, mounts, and patterns of your hand to reveal insights about your love life, career, health, and spiritual path.',
+            tags: ['Palm Reading', 'Life Line', 'Career', 'Hast Rekha'],
         },
         {
             id: 4,
-            url: {
-                src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1200&auto=format&fit=crop',
-            },
+            url: { src: cardNumerology },
             title: 'Numerology',
             description:
-                'Rise above everyday noise with a clear vantage point on what matters next. This space is crafted for leaders who want perspective without fluff—sharp visuals, calm composition, and room to think. Use it to frame milestones, seasonal campaigns, or premium offers that deserve a hero moment.',
-            tags: ['Altitude', 'Vision', 'Calm', 'Premium', 'Focus'],
+                'Numbers govern the universe. Dr. Harshit Rajveer\'s numerology service analyses your birth number, name number, and destiny number to help you make powerful decisions, choose auspicious dates, and align with the cosmic energy of numbers.',
+            tags: ['Birth Number', 'Name Correction', 'Lucky Numbers', 'Cosmic Alignment'],
         },
     ]
 
@@ -440,12 +492,37 @@ export default function HomePage() {
                 <div className="container">
                     <ScaleLetterHeading as="h2" className="section-title" text="Media & Awards" />
                     <div className="media-logo-row">
-                        <div className="media-logo">Business Times</div>
-                        <div className="media-logo">National TV</div>
-                        <div className="media-logo">Leadership Summit</div>
-                        <div className="media-logo">Astrology Awards</div>
-                        <div className="media-logo">Entrepreneur Forum</div>
+                        {mediaTabData.map((tab) => (
+                            <button
+                                key={tab.id}
+                                className={[
+                                    'media-logo',
+                                    tab.featured ? 'media-logo--featured' : '',
+                                    activeMediaTab === tab.id ? 'media-logo--active' : '',
+                                ].join(' ')}
+                                onClick={() => setActiveMediaTab(tab.id)}
+                            >
+                                {tab.label}
+                            </button>
+                        ))}
                     </div>
+                </div>
+            </section>
+
+            {/* ── 4b. Tab Content Panel (full-width) ── */}
+            <section className="plain-content-section">
+                <div className="plain-content-inner">
+                    {activeTab && (
+                        <div className="media-tab-content">
+                            <h3 className="media-tab-content__heading">{activeTab.content.heading}</h3>
+                            <p className="media-tab-content__body">{activeTab.content.body}</p>
+                            <ul className="media-tab-content__tags">
+                                {activeTab.content.tags.map((tag) => (
+                                    <li key={tag}>{tag}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
                 </div>
             </section>
 

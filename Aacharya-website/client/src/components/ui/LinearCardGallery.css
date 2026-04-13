@@ -2,12 +2,12 @@
 
 /* Strict 2-column grid: always two tracks, rows stack (never 3+ cards per row) */
 .linear-card-gallery {
-    --linear-card-max-width: 168px;
+    --linear-card-max-width: 240px;
 
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.75rem 0.85rem;
-    align-items: start;
+    align-items: stretch;
     width: 100%;
     max-width: calc(2 * var(--linear-card-max-width) + 0.85rem);
     margin-inline: auto;
@@ -38,9 +38,8 @@
     overflow: hidden;
     width: 100%;
     height: 100%;
-    min-height: 248px;
     border: 1px solid rgba(74, 14, 14, 0.18);
-    border-radius: 20px;
+    border-radius: 24px;
     background: linear-gradient(180deg, #fff9f1 0%, #f5ebe0 100%);
     box-shadow: 0 8px 22px rgba(74, 14, 14, 0.08);
     transition: box-shadow 0.25s ease, transform 0.25s ease;
@@ -54,21 +53,23 @@
 .linear-card__thumb {
     display: block;
     width: 100%;
-    height: 158px;
-    object-fit: contain;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    object-fit: cover;
     flex-shrink: 0;
-    border-radius: 20px 20px 0 0;
-    background: #0a0a0a;
+    border-radius: 22px 22px 0 0;
+    background: transparent;
 }
 
 .linear-card__trigger-footer {
     position: relative;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 0.5rem;
-    padding: 0.65rem 0.75rem 0.75rem;
+    padding: 0.75rem 0.75rem 0.75rem;
+    min-height: 4rem;
     flex: 1;
 }
 
@@ -146,9 +147,10 @@
 .linear-card__panel-img {
     display: block;
     width: 100%;
-    max-height: min(55vh, 480px);
-    object-fit: contain;
-    background: #0a0a0a;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    object-fit: cover;
+    background: transparent;
 }
 
 .linear-card__panel-body {
@@ -227,14 +229,10 @@ body.linear-card-gallery--open {
 
 @media (max-width: 520px) {
     .linear-card-gallery {
-        --linear-card-max-width: 156px;
-    }
-
-    .linear-card__thumb {
-        height: 148px;
+        --linear-card-max-width: 190px;
     }
 
     .linear-card__trigger-surface {
-        min-height: 228px;
+        min-height: unset;
     }
 }
