@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FiArrowRight, FiShield, FiCheck, FiStar } from 'react-icons/fi'
-import CobeGlobe from '../components/ui/CobeGlobe'
 import ScaleLetterHeading from '../components/ui/ScaleLetterHeading'
 import LinearCardGallery from '../components/ui/LinearCardGallery'
+import BrillianceAwardsShowcase from '../components/awards/BrillianceAwardsShowcase'
+import { SlideTabs } from '../components/ui/slide-tabs'
 import harshitHeroImg from '../assets/harshit_hero.png'
 import authorityFeaturedImg from '../assets/authority_reading_nakshatras.png'
 import ajaiBhambiImg from '../assets/ajai_bhambi.png'
@@ -16,6 +17,10 @@ import premSharmaImg from '../assets/prem_sharma.png'
 import sandeepKocharImg from '../assets/sandeep_kochar.png'
 import sanjayJumaaniImg from '../assets/sanjay_jumaani.png'
 import sohiniShastriImg from '../assets/sohini_shastri.png'
+import bharatShreeNew1Img from '../assets/bharat_shree_new_1.png'
+import bharatShreeNew2Img from '../assets/bharat_shree_new_2.png'
+import bharatShreeNew3Img from '../assets/bharat_shree_new_3.png'
+import bharatShreeGoldBgImg from '../assets/bharat_shree_gold_bg.png'
 import marqueeEshaDeol from '../assets/marquee_esha_deol.png'
 import marqueeMannara from '../assets/marquee_mannara.png'
 import marqueeManojTiwari from '../assets/marquee_manoj_tiwari.png'
@@ -26,10 +31,16 @@ import marqueeTusharKapoor from '../assets/marquee_tushar_kapoor.png'
 import marqueeDaisyShah from '../assets/marquee_daisy_shah.png'
 import marqueeBhagyashree from '../assets/marquee_bhagyashree.png'
 import marqueeAnchalMunjal from '../assets/marquee_anchal_munjal.png'
+import eiaWithActressImg from '../assets/eia_with_actress.png'
 import cardLiveConsultation from '../assets/card_live_consultation.jpeg'
 import cardFaceReading from '../assets/card_face_reading.jpeg'
 import cardPalmistry from '../assets/card_palmistry.jpeg'
 import cardNumerology from '../assets/card_numerology.jpeg'
+import bestAwardGlobalImg from '../assets/best_award_global.png'
+import bestAwardAnchalImg from '../assets/best_award_anchal_munjal.png'
+import bestAwardHariRawatImg from '../assets/best_award_hari_singh_rawat.png'
+import bestAwardAtalImg from '../assets/best_award_atal.png'
+import bestAward2024Img from '../assets/best_award_2024.png'
 import './HomePage.css'
 
 export default function HomePage() {
@@ -165,8 +176,18 @@ export default function HomePage() {
 
     const mediaTabData = [
         {
+            id: 'entrepreneur-forum',
+            label: 'Best Astrologer Award',
+            featured: false,
+            content: {
+                heading: 'Best Astrologer Award',
+                body: 'A premium showcase of award recognitions and public honors reflecting years of trusted spiritual guidance and social impact.',
+                tags: ['Awards', 'Recognition', 'Global Presence', 'Excellence'],
+            },
+        },
+        {
             id: 'awards-summit',
-            label: 'International Brilliance Awards Summit 2024',
+            label: 'International Brilliance Awards',
             featured: true,
             content: {
                 heading: 'International Brilliance Awards Summit 2024',
@@ -175,49 +196,36 @@ export default function HomePage() {
             },
         },
         {
-            id: 'national-tv',
-            label: 'National TV',
-            featured: false,
-            content: {
-                heading: 'National TV Appearances',
-                body: 'Dr. Harshit Rajveer has graced several leading national television channels as a distinguished astrology expert. His in-depth analysis on planetary movements, celebrity birth charts, and upcoming cosmic events has earned him widespread recognition as one of India\'s most trusted on-screen astrologers.',
-                tags: ['Television', 'Expert Panelist', 'Prime Time', 'Media'],
-            },
-        },
-        {
-            id: 'leadership-summit',
-            label: 'Leadership Summit',
-            featured: false,
-            content: {
-                heading: 'Leadership Summit',
-                body: 'As a keynote speaker at multiple Leadership Summits across India, Dr. Harshit Rajveer bridges the world of ancient Vedic wisdom with modern leadership strategy. Business executives, entrepreneurs, and policymakers attend his sessions to gain clarity on timing key decisions using astrological insights.',
-                tags: ['Keynote Speaker', 'Business', 'Strategy', 'Vedic Wisdom'],
-            },
-        },
-        {
             id: 'astrology-awards',
-            label: 'Astrology Awards',
+            label: 'Bharat Shree Awards',
             featured: false,
             content: {
-                heading: 'Astrology Awards',
-                body: 'Recognised by multiple astrology bodies and institutions, Dr. Harshit Rajveer has received numerous awards celebrating excellence in Vedic astrology, kundali analysis, and predictive accuracy. These honours reflect the trust and gratitude of over 500+ clients he has guided through pivotal life decisions.',
-                tags: ['Recognised Expert', 'Vedic Science', 'Kundali', 'Excellence'],
+                heading: 'Proud Recipient of the Prestigious Bharat Shree Award',
+                body: 'Honored at Bharat Shree National Conference & Summit 2024 for impactful contribution through Vedic guidance, trusted consultations, and meaningful public spiritual outreach.',
+                tags: [],
             },
         },
         {
-            id: 'entrepreneur-forum',
-            label: 'Entrepreneur Forum',
+            id: 'national-tv',
+            label: 'Eternal Icon Award',
             featured: false,
             content: {
-                heading: 'Entrepreneur Forum',
-                body: 'At leading Entrepreneur Forums and startup conclave events, Dr. Harshit Rajveer has shared how astrology can help founders choose auspicious timings for launches, partnerships, and funding rounds. His unique blend of ancient knowledge and modern business application has made him a sought-after advisor in entrepreneurial circles.',
-                tags: ['Startups', 'Business Timing', 'Muhurat', 'Founders'],
+                heading: 'Eternal Icon Awards (EIA)',
+                body: 'A proud recognition moment captured with celebrated actress Esha Deol during the Eternal Icon Awards ceremony. The event highlights Dr. Kunwar Harshit Rajveer\'s impactful work in Vedic astrology and public guidance.',
+                tags: ['EIA', 'Award Night', 'Celebrity Presence', 'Recognition'],
             },
         },
     ]
 
-    const [activeMediaTab, setActiveMediaTab] = useState('awards-summit')
+    const [activeMediaTab, setActiveMediaTab] = useState('entrepreneur-forum')
     const activeTab = mediaTabData.find((t) => t.id === activeMediaTab)
+
+    const plainSectionMosaic = {
+        'national-tv': { top: deepakKapoorImg, bottomLeft: sandeepKocharImg, bottomRight: ajaiBhambiImg },
+        'astrology-awards': { top: bharatShreeNew1Img, bottomLeft: bharatShreeNew2Img, bottomRight: bharatShreeNew3Img },
+        'entrepreneur-forum': { top: sandeepKocharImg, bottomLeft: ajaiBhambiImg, bottomRight: deepakKapoorImg },
+    }
+    const activePlainMosaic = plainSectionMosaic[activeMediaTab] || plainSectionMosaic['national-tv']
 
     const authorityLinearGalleryItems = [
         {
@@ -251,6 +259,38 @@ export default function HomePage() {
             description:
                 'Numbers govern the universe. Dr. Harshit Rajveer\'s numerology service analyses your birth number, name number, and destiny number to help you make powerful decisions, choose auspicious dates, and align with the cosmic energy of numbers.',
             tags: ['Birth Number', 'Name Correction', 'Lucky Numbers', 'Cosmic Alignment'],
+        },
+    ]
+
+    const bestAwardCards = [
+        {
+            title: 'Best Global Award',
+            description:
+                'Honored on a global platform for outstanding contribution in the field of spirituality, astrology, and guiding individuals towards a better tomorrow.',
+            image: bestAwardGlobalImg,
+            actorLine: 'With Actor Tushar Kapoor',
+            reverse: false,
+        },
+        {
+            title: 'With Anchal Munjal - SRC Entertainment',
+            description:
+                'Recognized by SRC Entertainment for excellence and remarkable contributions in the spiritual and wellness domain.',
+            image: bestAwardAnchalImg,
+            reverse: true,
+        },
+        {
+            title: 'With International Astrologer Dr. Hari Singh Rawat',
+            description:
+                'Received blessings and guidance from renowned international astrologer Dr. Hari Singh Rawat.',
+            image: bestAwardHariRawatImg,
+            reverse: false,
+        },
+        {
+            title: 'Atal Awards',
+            description:
+                'Felicitated at the prestigious Atal Awards for exceptional work and social impact.',
+            image: bestAwardAtalImg,
+            reverse: true,
         },
     ]
 
@@ -490,41 +530,153 @@ export default function HomePage() {
             {/* ── 4. Media & Awards ── */}
             <section className="media-awards-section">
                 <div className="container">
-                    <ScaleLetterHeading as="h2" className="section-title" text="Media & Awards" />
-                    <div className="media-logo-row">
-                        {mediaTabData.map((tab) => (
-                            <button
-                                key={tab.id}
-                                className={[
-                                    'media-logo',
-                                    tab.featured ? 'media-logo--featured' : '',
-                                    activeMediaTab === tab.id ? 'media-logo--active' : '',
-                                ].join(' ')}
-                                onClick={() => setActiveMediaTab(tab.id)}
-                            >
-                                {tab.label}
-                            </button>
-                        ))}
+                    <ScaleLetterHeading as="h2" className="section-title" text="Legacy of Excellence" />
+                    <div>
+                        <SlideTabs
+                            tabs={mediaTabData.map((t) => t.label)}
+                            selectedIndex={Math.max(0, mediaTabData.findIndex((t) => t.id === activeMediaTab))}
+                            onSelect={(index) => {
+                                const next = mediaTabData[index];
+                                if (next) setActiveMediaTab(next.id);
+                            }}
+                        />
                     </div>
                 </div>
             </section>
 
             {/* ── 4b. Tab Content Panel (full-width) ── */}
-            <section className="plain-content-section">
-                <div className="plain-content-inner">
-                    {activeTab && (
-                        <div className="media-tab-content">
-                            <h3 className="media-tab-content__heading">{activeTab.content.heading}</h3>
-                            <p className="media-tab-content__body">{activeTab.content.body}</p>
-                            <ul className="media-tab-content__tags">
-                                {activeTab.content.tags.map((tag) => (
-                                    <li key={tag}>{tag}</li>
-                                ))}
-                            </ul>
+            {activeTab?.id === 'awards-summit' ? (
+                <BrillianceAwardsShowcase />
+            ) : activeTab?.id === 'national-tv' ? (
+                <section className="eia-showcase-section">
+                    <div className="eia-showcase-inner">
+                        <div className="eia-showcase-media">
+                            <img
+                                src={eiaWithActressImg}
+                                alt="Dr. Kunwar Harshit Rajveer with actress Esha Deol at EIA awards"
+                                className="eia-showcase-image"
+                            />
                         </div>
-                    )}
-                </div>
-            </section>
+                        <div className="eia-showcase-content">
+                            <h3 className="eia-showcase-title">EIA Recognition Moment</h3>
+                            <p className="eia-showcase-text">
+                                Honored at Eternal Icon Awards in a prestigious ceremony featuring
+                                <strong> Actress Esha Deol</strong>. This moment reflects growing
+                                recognition of Dr. Kunwar Harshit Rajveer&apos;s contributions to practical
+                                Vedic guidance.
+                            </p>
+                            <div className="eia-showcase-caption">With Actress Esha Deol</div>
+                        </div>
+                    </div>
+                </section>
+            ) : activeTab?.id === 'entrepreneur-forum' ? (
+                <section className="best-award-section">
+                    <div className="best-award-section__hero">
+                        <h3 className="best-award-section__hero-title">Awards &amp; Recognitions</h3>
+                        <p className="best-award-section__hero-subtitle">Honoring Excellence. Inspiring Trust.</p>
+                        <p className="best-award-section__hero-desc">
+                            A journey dedicated to spiritual guidance, astrology, and transforming lives -
+                            recognized on global platforms.
+                        </p>
+                    </div>
+
+                    <div className="best-award-grid">
+                        {bestAwardCards.map((card) => (
+                            <article
+                                key={card.title}
+                                className={`best-award-card ${card.reverse ? 'best-award-card--reverse' : ''}`}
+                            >
+                                <div className="best-award-card__image-wrap">
+                                    <img src={card.image} alt={card.title} className="best-award-card__image" />
+                                </div>
+                                <div className="best-award-card__content">
+                                    <h4 className="best-award-card__title">{card.title}</h4>
+                                    <p className="best-award-card__text">{card.description}</p>
+                                    {card.actorLine && <p className="best-award-card__actor">{card.actorLine}</p>}
+                                </div>
+                            </article>
+                        ))}
+
+                        <article className="best-award-card best-award-card--feature">
+                            <div className="best-award-card__image-wrap">
+                                <img
+                                    src={bestAward2024Img}
+                                    alt="Best Astrologer Award 2024"
+                                    className="best-award-card__image"
+                                />
+                            </div>
+                            <div className="best-award-card__content">
+                                <h4 className="best-award-card__title">Best Astrologer Award 2024</h4>
+                                <p className="best-award-card__text">
+                                    Awarded as the Best Astrologer 2024 in recognition of dedication, accuracy, and
+                                    positive impact on people&apos;s lives.
+                                </p>
+                                <p className="best-award-card__actor">With Actress Bhagyashree</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div className="best-award-values">
+                        <div className="best-award-values__item"><span>🛡️</span> Trust</div>
+                        <div className="best-award-values__item"><span>🧭</span> Guidance</div>
+                        <div className="best-award-values__item"><span>✨</span> Transformation</div>
+                        <div className="best-award-values__item"><span>🏅</span> Excellence</div>
+                    </div>
+                </section>
+            ) : (
+                <section
+                    className={`plain-content-section ${activeTab?.id === 'astrology-awards' ? 'plain-content-section--bharat-bg' : ''}`}
+                    style={
+                        activeTab?.id === 'astrology-awards'
+                            ? { backgroundImage: `url(${bharatShreeGoldBgImg})` }
+                            : undefined
+                    }
+                >
+                    <div className="plain-content-inner">
+                        {activeTab && (
+                            <div className={`media-tab-layout ${activeTab.id === 'astrology-awards' ? 'media-tab-layout--bharat' : ''}`}>
+                                {activeTab.id === 'astrology-awards' && (
+                                    <div className="bharat-top-nameplate" aria-label="Award recipient name">
+                                        <h3 className="bharat-top-nameplate__title">Dr. Kunwar Harshit Rajveer</h3>
+                                        <p className="bharat-top-nameplate__subtitle">With Actor Rajeev Verma</p>
+                                    </div>
+                                )}
+                                <div
+                                    className={`media-tab-mosaic ${activeTab.id === 'astrology-awards' ? 'media-tab-mosaic--clean' : ''}`}
+                                    aria-hidden="true"
+                                >
+                                    {activeTab.id !== 'astrology-awards' && <div className="media-tab-mosaic__gradient" />}
+                                    <img src={activePlainMosaic.top} alt="" className="media-tab-mosaic__img media-tab-mosaic__img--top" />
+                                    <img src={activePlainMosaic.bottomLeft} alt="" className="media-tab-mosaic__img media-tab-mosaic__img--bottom-left" />
+                                    <img src={activePlainMosaic.bottomRight} alt="" className="media-tab-mosaic__img media-tab-mosaic__img--bottom-right" />
+                                </div>
+                                <div className={`media-tab-content ${activeTab.id === 'astrology-awards' ? 'media-tab-content--bharat' : ''}`}>
+                                    {activeTab.id === 'astrology-awards' ? (
+                                        <>
+                                            <h3 className="media-tab-content__heading">{activeTab.content.heading}</h3>
+                                            <p className="media-tab-content__name">Dr. Kunwar Harshit Rajveer Ji</p>
+                                            <p className="media-tab-content__body">{activeTab.content.body}</p>
+                                            <p className="media-tab-content__highlight">
+                                                Featuring respected actor <strong>Rajeev Verma</strong> during this prestigious award moment.
+                                            </p>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <h3 className="media-tab-content__heading">{activeTab.content.heading}</h3>
+                                            <p className="media-tab-content__body">{activeTab.content.body}</p>
+                                            <ul className="media-tab-content__tags">
+                                                {activeTab.content.tags.map((tag) => (
+                                                    <li key={tag}>{tag}</li>
+                                                ))}
+                                            </ul>
+                                        </>
+                                    )}
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </section>
+            )}
 
             {/* ── 5. Popular Astrology Services ── */}
             <section className="exclusivity-section">
@@ -572,29 +724,6 @@ export default function HomePage() {
                                 </div>
                             </div>
                         ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* ── Legacy Section Restored: Moving Globe + Insights ── */}
-            <section className="preview-section">
-                <div className="container">
-                    <div className="preview-layout">
-                        <div className="preview-content">
-                            <ScaleLetterHeading as="h2" className="text-left" text="Crystal Clear Insights" />
-                            <p>Most astrology reports are confusing. Ours are designed for clarity.</p>
-                            <ul className="benefits-list">
-                                <li><FiCheck className="text-gold" /> <strong>Plain English:</strong> No complex jargon without explanation.</li>
-                                <li><FiCheck className="text-gold" /> <strong>Actionable Remedies:</strong> Simple rituals and gemstones.</li>
-                                <li><FiCheck className="text-gold" /> <strong>5-Year Forecast:</strong> Know what's coming next.</li>
-                            </ul>
-                            <Link to="/reports" className="btn btn-primary">
-                                See Detailed Features
-                            </Link>
-                        </div>
-                        <div className="preview-visual preview-globe">
-                            <CobeGlobe />
-                        </div>
                     </div>
                 </div>
             </section>
