@@ -1003,7 +1003,7 @@
     background-color: #0f0c0a;
     background-image:
         linear-gradient(180deg, rgba(9, 7, 6, 0.72) 0%, rgba(20, 14, 10, 0.78) 100%),
-        url('../assets/eia_bg_gold_rays.png');
+        url('../assets/eia_bg_gold_rays.webp');
     background-size: cover, cover;
     background-position: center, center;
     background-repeat: no-repeat, no-repeat;

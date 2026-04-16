@@ -4,7 +4,7 @@
     background-color: #080605;
     background-image:
         linear-gradient(180deg, rgba(8, 6, 5, 0.72) 0%, rgba(14, 9, 7, 0.78) 100%),
-        url('../../assets/awards_bg_gold.png');
+        url('../../assets/awards_bg_gold.webp');
     background-size: cover, cover;
     background-position: center, center;
     background-repeat: no-repeat, no-repeat;

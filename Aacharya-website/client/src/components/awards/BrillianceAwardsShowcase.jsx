@@ -2,9 +2,9 @@ import React from 'react';
 import './BrillianceAwardsShowcase.css';
 
 // Import images
-import awardMainImg from '../../assets/award_real_daisy.png';
-import awardSoloImg from '../../assets/award_real_solo.png';
-import awardPosterImg from '../../assets/award_real_poster.png';
+import awardMainImg from '../../assets/award_real_daisy.webp';
+import awardSoloImg from '../../assets/award_real_solo.webp';
+import awardPosterImg from '../../assets/award_real_poster.webp';
 
 const BrillianceAwardsShowcase = () => {
     return (

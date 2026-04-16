@@ -6,54 +6,54 @@ import LinearCardGallery from '../components/ui/LinearCardGallery'
 import BrillianceAwardsShowcase from '../components/awards/BrillianceAwardsShowcase'
 import { SlideTabs } from '../components/ui/slide-tabs'
 import CircularGallerySection from '../components/ui/CircularGallerySection'
-import harshitHeroImg from '../assets/harshit_hero.png'
-import authorityFeaturedImg from '../assets/authority_reading_nakshatras.png'
-import ajaiBhambiImg from '../assets/ajai_bhambi.png'
-import deepakKapoorImg from '../assets/deepak_kapoor.png'
-import gdVashistImg from '../assets/gd_vashist.png'
-import hemantBaruaImg from '../assets/hemant_barua.png'
-import induPrakashImg from '../assets/indu_prakash.png'
-import knRaoImg from '../assets/kn_rao.png'
-import premSharmaImg from '../assets/prem_sharma.png'
-import sandeepKocharImg from '../assets/sandeep_kochar.png'
-import sanjayJumaaniImg from '../assets/sanjay_jumaani.png'
-import sohiniShastriImg from '../assets/sohini_shastri.png'
-import bharatShreeNew1Img from '../assets/bharat_shree_new_1.png'
-import bharatShreeNew2Img from '../assets/bharat_shree_new_2.png'
-import bharatShreeNew3Img from '../assets/bharat_shree_new_3.png'
-import bharatShreeGoldBgImg from '../assets/bharat_shree_gold_bg.png'
-import marqueeEshaDeol from '../assets/marquee_esha_deol.png'
-import marqueeMannara from '../assets/marquee_mannara.png'
-import marqueeManojTiwari from '../assets/marquee_manoj_tiwari.png'
-import marqueeAkhilendraMishra from '../assets/marquee_akhilendra_mishra.png'
-import marqueeRajeevVerma from '../assets/marquee_rajeev_verma.png'
-import marqueeGuest from '../assets/marquee_guest.png'
-import marqueeTusharKapoor from '../assets/marquee_tushar_kapoor.png'
-import marqueeDaisyShah from '../assets/marquee_daisy_shah.png'
-import marqueeBhagyashree from '../assets/marquee_bhagyashree.png'
-import marqueeAnchalMunjal from '../assets/marquee_anchal_munjal.png'
-import eiaWithActressImg from '../assets/eia_with_actress.png'
-import cardLiveConsultation from '../assets/card_live_consultation.jpeg'
-import cardFaceReading from '../assets/card_face_reading.jpeg'
-import cardPalmistry from '../assets/card_palmistry.jpeg'
-import cardNumerology from '../assets/card_numerology.jpeg'
-import bestAwardGlobalImg from '../assets/best_award_global.png'
-import podcastRussianAnchor from '../assets/podcast_russian_anchor.jpg'
-import podcastMukeshAmbani from '../assets/podcast_mukesh_ambani.jpg'
-import podcastEktaKapoor from '../assets/podcast_ekta_kapoor.jpg'
-import podcastKanganaRanaut from '../assets/podcast_kangana_ranaut.jpg'
-import podcastViratKohli from '../assets/podcast_virat_kohli.jpg'
-import podcastPalmistry from '../assets/podcast_palmistry.png'
-import podcastAmitShah from '../assets/podcast_amit_shah.png'
-import podcastAmitabh from '../assets/podcast_amitabh.jpg'
-import podcastJyotirling from '../assets/podcast_jyotirling.jpg'
-import podcastJyotirling2 from '../assets/podcast_jyotirling_2.jpg'
-import podcastSamudraManthan from '../assets/podcast_samudra_manthan.jpg'
-import podcastGangaChandrama from '../assets/podcast_ganga_chandrama.jpg'
-import bestAwardAnchalImg from '../assets/best_award_anchal_munjal.png'
-import bestAwardHariRawatImg from '../assets/best_award_hari_singh_rawat.png'
-import bestAwardAtalImg from '../assets/best_award_atal.png'
-import bestAward2024Img from '../assets/best_award_2024.png'
+import harshitHeroImg from '../assets/harshit_hero.webp'
+import authorityFeaturedImg from '../assets/authority_reading_nakshatras.webp'
+import ajaiBhambiImg from '../assets/ajai_bhambi.webp'
+import deepakKapoorImg from '../assets/deepak_kapoor.webp'
+import gdVashistImg from '../assets/gd_vashist.webp'
+import hemantBaruaImg from '../assets/hemant_barua.webp'
+import induPrakashImg from '../assets/indu_prakash.webp'
+import knRaoImg from '../assets/kn_rao.webp'
+import premSharmaImg from '../assets/prem_sharma.webp'
+import sandeepKocharImg from '../assets/sandeep_kochar.webp'
+import sanjayJumaaniImg from '../assets/sanjay_jumaani.webp'
+import sohiniShastriImg from '../assets/sohini_shastri.webp'
+import bharatShreeNew1Img from '../assets/bharat_shree_new_1.webp'
+import bharatShreeNew2Img from '../assets/bharat_shree_new_2.webp'
+import bharatShreeNew3Img from '../assets/bharat_shree_new_3.webp'
+import bharatShreeGoldBgImg from '../assets/bharat_shree_gold_bg.webp'
+import marqueeEshaDeol from '../assets/marquee_esha_deol.webp'
+import marqueeMannara from '../assets/marquee_mannara.webp'
+import marqueeManojTiwari from '../assets/marquee_manoj_tiwari.webp'
+import marqueeAkhilendraMishra from '../assets/marquee_akhilendra_mishra.webp'
+import marqueeRajeevVerma from '../assets/marquee_rajeev_verma.webp'
+import marqueeGuest from '../assets/marquee_guest.webp'
+import marqueeTusharKapoor from '../assets/marquee_tushar_kapoor.webp'
+import marqueeDaisyShah from '../assets/marquee_daisy_shah.webp'
+import marqueeBhagyashree from '../assets/marquee_bhagyashree.webp'
+import marqueeAnchalMunjal from '../assets/marquee_anchal_munjal.webp'
+import eiaWithActressImg from '../assets/eia_with_actress.webp'
+import cardLiveConsultation from '../assets/card_live_consultation.webp'
+import cardFaceReading from '../assets/card_face_reading.webp'
+import cardPalmistry from '../assets/card_palmistry.webp'
+import cardNumerology from '../assets/card_numerology.webp'
+import bestAwardGlobalImg from '../assets/best_award_global.webp'
+import podcastRussianAnchor from '../assets/podcast_russian_anchor.webp'
+import podcastMukeshAmbani from '../assets/podcast_mukesh_ambani.webp'
+import podcastEktaKapoor from '../assets/podcast_ekta_kapoor.webp'
+import podcastKanganaRanaut from '../assets/podcast_kangana_ranaut.webp'
+import podcastViratKohli from '../assets/podcast_virat_kohli.webp'
+import podcastPalmistry from '../assets/podcast_palmistry.webp'
+import podcastAmitShah from '../assets/podcast_amit_shah.webp'
+import podcastAmitabh from '../assets/podcast_amitabh.webp'
+import podcastJyotirling from '../assets/podcast_jyotirling.webp'
+import podcastJyotirling2 from '../assets/podcast_jyotirling_2.webp'
+import podcastSamudraManthan from '../assets/podcast_samudra_manthan.webp'
+import podcastGangaChandrama from '../assets/podcast_ganga_chandrama.webp'
+import bestAwardAnchalImg from '../assets/best_award_anchal_munjal.webp'
+import bestAwardHariRawatImg from '../assets/best_award_hari_singh_rawat.webp'
+import bestAwardAtalImg from '../assets/best_award_atal.webp'
+import bestAward2024Img from '../assets/best_award_2024.webp'
 import './HomePage.css'
 
 export default function HomePage() {
@@ -382,12 +382,12 @@ export default function HomePage() {
                                 <div className="hero-proof-marquee-track">
                                     <div className="hero-proof-marquee-set">
                                         {heroMarqueeFaces.map((face, idx) => (
-                                            <img key={`a-${idx}`} src={face.src} alt="" className="hero-proof-face" />
+                                            <img key={`a-${idx}`} src={face.src} alt="" className="hero-proof-face" loading="lazy" decoding="async" />
                                         ))}
                                     </div>
                                     <div className="hero-proof-marquee-set" aria-hidden="true">
                                         {heroMarqueeFaces.map((face, idx) => (
-                                            <img key={`b-${idx}`} src={face.src} alt="" className="hero-proof-face" />
+                                            <img key={`b-${idx}`} src={face.src} alt="" className="hero-proof-face" loading="lazy" decoding="async" />
                                         ))}
                                     </div>
                                 </div>
@@ -411,6 +411,9 @@ export default function HomePage() {
                             src={harshitHeroImg}
                             alt="Harshit Rajveer"
                             className="hero-right-image"
+                            loading="eager"
+                            fetchPriority="high"
+                            decoding="async"
                             draggable={false}
                         />
                     </div>
@@ -441,6 +444,8 @@ export default function HomePage() {
                                         src={authorityFeaturedImg}
                                         alt="Dr. Kunwar Harshit Rajveer reading Nakshatras in Astrology"
                                         className="authority-featured-image"
+                                        loading="lazy"
+                                        decoding="async"
                                     />
                                 </div>
                                 {/* Col 2 Row 1: trust copy */}
@@ -521,7 +526,7 @@ export default function HomePage() {
                     <div className="proof-grid">
                         {proofItems.map((item, idx) => (
                             <div className="proof-item" key={idx}>
-                                <img src={item.image} alt={item.caption} className="proof-image" />
+                                <img src={item.image} alt={item.caption} className="proof-image" loading="lazy" decoding="async" />
                                 <p className="proof-caption">{item.caption}</p>
                             </div>
                         ))}
@@ -535,7 +540,7 @@ export default function HomePage() {
                     <ScaleLetterHeading as="h2" className="section-title" text="Featured Moments" />
 
                     <div className="featured-story-row">
-                        <img src={deepakKapoorImg} alt="Trusted by top entrepreneurs" className="featured-story-image" />
+                        <img src={deepakKapoorImg} alt="Trusted by top entrepreneurs" className="featured-story-image" loading="lazy" decoding="async" />
                         <div className="featured-story-content">
                             <h3>Trusted by India&apos;s Top Entrepreneurs</h3>
                             <p>
@@ -546,7 +551,7 @@ export default function HomePage() {
                     </div>
 
                     <div className="featured-story-row reverse">
-                        <img src={sandeepKocharImg} alt="Government and public platform presence" className="featured-story-image" />
+                        <img src={sandeepKocharImg} alt="Government and public platform presence" className="featured-story-image" loading="lazy" decoding="async" />
                         <div className="featured-story-content">
                             <h3>Invited on Public and Policy Platforms</h3>
                             <p>
@@ -557,7 +562,7 @@ export default function HomePage() {
                     </div>
 
                     <div className="featured-story-row">
-                        <img src={knRaoImg} alt="Personalized guidance stories" className="featured-story-image" />
+                        <img src={knRaoImg} alt="Personalized guidance stories" className="featured-story-image" loading="lazy" decoding="async" />
                         <div className="featured-story-content">
                             <h3>Personalized Guidance with Measurable Outcomes</h3>
                             <p>
@@ -597,6 +602,8 @@ export default function HomePage() {
                                 src={eiaWithActressImg}
                                 alt="Dr. Kunwar Harshit Rajveer with actress Esha Deol at EIA awards"
                                 className="eia-showcase-image"
+                                loading="lazy"
+                                decoding="async"
                             />
                         </div>
                         <div className="eia-showcase-content">
@@ -629,7 +636,7 @@ export default function HomePage() {
                                 className={`best-award-card ${card.reverse ? 'best-award-card--reverse' : ''}`}
                             >
                                 <div className="best-award-card__image-wrap">
-                                    <img src={card.image} alt={card.title} className="best-award-card__image" />
+                                    <img src={card.image} alt={card.title} className="best-award-card__image" loading="lazy" decoding="async" />
                                 </div>
                                 <div className="best-award-card__content">
                                     <h4 className="best-award-card__title">{card.title}</h4>
@@ -645,6 +652,8 @@ export default function HomePage() {
                                     src={bestAward2024Img}
                                     alt="Best Astrologer Award 2024"
                                     className="best-award-card__image"
+                                    loading="lazy"
+                                    decoding="async"
                                 />
                             </div>
                             <div className="best-award-card__content">
@@ -688,9 +697,9 @@ export default function HomePage() {
                                     aria-hidden="true"
                                 >
                                     {activeTab.id !== 'astrology-awards' && <div className="media-tab-mosaic__gradient" />}
-                                    <img src={activePlainMosaic.top} alt="" className="media-tab-mosaic__img media-tab-mosaic__img--top" />
-                                    <img src={activePlainMosaic.bottomLeft} alt="" className="media-tab-mosaic__img media-tab-mosaic__img--bottom-left" />
-                                    <img src={activePlainMosaic.bottomRight} alt="" className="media-tab-mosaic__img media-tab-mosaic__img--bottom-right" />
+                                    <img src={activePlainMosaic.top} alt="" className="media-tab-mosaic__img media-tab-mosaic__img--top" loading="lazy" decoding="async" />
+                                    <img src={activePlainMosaic.bottomLeft} alt="" className="media-tab-mosaic__img media-tab-mosaic__img--bottom-left" loading="lazy" decoding="async" />
+                                    <img src={activePlainMosaic.bottomRight} alt="" className="media-tab-mosaic__img media-tab-mosaic__img--bottom-right" loading="lazy" decoding="async" />
                                 </div>
                                 <div className={`media-tab-content ${activeTab.id === 'astrology-awards' ? 'media-tab-content--bharat' : ''}`}>
                                     {activeTab.id === 'astrology-awards' ? (
@@ -793,7 +802,7 @@ export default function HomePage() {
                     <div className="video-proof-grid">
                         {videoProofItems.map((item, idx) => (
                             <div className="video-proof-card" key={`${item.title}-${idx}`}>
-                                <img src={item.image} alt={`${item.title} thumbnail`} className="video-proof-thumb" />
+                                <img src={item.image} alt={`${item.title} thumbnail`} className="video-proof-thumb" loading="lazy" decoding="async" />
                                 <div className="video-proof-watch">◉ WATCH NOW</div>
                                 <div className="video-proof-content">
                                     <h3>{item.title}</h3>

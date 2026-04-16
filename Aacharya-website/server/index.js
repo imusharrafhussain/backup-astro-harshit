@@ -4,11 +4,20 @@ const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const connectDB = require('./config/db');
+const { initCacheClient } = require('./config/cacheClient');
 
 const app = express();
 
 // ── Security ──
-app.use(helmet());
+app.use(helmet({
+    contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+            "img-src": ["'self'", "data:", "https:"],
+        },
+    },
+    crossOriginResourcePolicy: { policy: 'cross-origin' },
+}));
 app.use(cors({
     origin: process.env.CLIENT_URL || 'http://localhost:5173',
     credentials: true,
@@ -46,7 +55,7 @@ app.use(require('./middleware/errorHandler'));
 // ── Start ──
 const PORT = process.env.PORT || 5000;
 
-connectDB().then(() => {
+Promise.all([connectDB(), initCacheClient()]).then(() => {
     app.listen(PORT, () => {
         console.log(`🚀 Server running on port ${PORT}`);
         console.log(`📡 API: http://localhost:${PORT}/api/health`);

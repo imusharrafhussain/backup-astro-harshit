@@ -1,17 +1,17 @@
 import React from 'react';
 import { CircularGallery } from './circular-gallery';
-import zodiacAries from '../../assets/zodiac_aries.png';
-import zodiacTaurus from '../../assets/zodiac_taurus.png';
-import zodiacGemini from '../../assets/zodiac_gemini.png';
-import zodiacCancer from '../../assets/zodiac_cancer.png';
-import zodiacLeo from '../../assets/zodiac_leo.png';
-import zodiacVirgo from '../../assets/zodiac_virgo.png';
-import zodiacLibra from '../../assets/zodiac_libra.png';
-import zodiacScorpio from '../../assets/zodiac_scorpio.png';
-import zodiacSagittarius from '../../assets/zodiac_sagittarius.png';
-import zodiacCapricorn from '../../assets/zodiac_capricorn.png';
-import zodiacAquarius from '../../assets/zodiac_aquarius.png';
-import zodiacPisces from '../../assets/zodiac_pisces.png';
+import zodiacAries from '../../assets/zodiac_aries.webp';
+import zodiacTaurus from '../../assets/zodiac_taurus.webp';
+import zodiacGemini from '../../assets/zodiac_gemini.webp';
+import zodiacCancer from '../../assets/zodiac_cancer.webp';
+import zodiacLeo from '../../assets/zodiac_leo.webp';
+import zodiacVirgo from '../../assets/zodiac_virgo.webp';
+import zodiacLibra from '../../assets/zodiac_libra.webp';
+import zodiacScorpio from '../../assets/zodiac_scorpio.webp';
+import zodiacSagittarius from '../../assets/zodiac_sagittarius.webp';
+import zodiacCapricorn from '../../assets/zodiac_capricorn.webp';
+import zodiacAquarius from '../../assets/zodiac_aquarius.webp';
+import zodiacPisces from '../../assets/zodiac_pisces.webp';
 
 const galleryData = [
 	{
