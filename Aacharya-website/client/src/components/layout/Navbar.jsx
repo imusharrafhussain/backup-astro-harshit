@@ -25,6 +25,8 @@ export default function Navbar() {
     const servicesButtonRef = useRef(null)
     const location = useLocation()
     const { user, logout } = useAuth() || {}; // Handle potential null context if used outside provider (though unlikely here)
+    const isServicesRoute = location.pathname === '/services' || location.pathname.startsWith('/services/')
+    const isHoroscopeRoute = location.pathname.startsWith('/horoscope')
 
     useEffect(() => {
         const handleScroll = () => {
@@ -135,7 +137,7 @@ export default function Navbar() {
                             <button
                                 ref={servicesButtonRef}
                                 type="button"
-                                className="nav-item nav-mega-trigger"
+                                className={`nav-item nav-mega-trigger ${isServicesRoute ? 'active' : ''}`}
                                 aria-expanded={isServicesOpen}
                                 onMouseEnter={() => setIsServicesOpen(true)}
                                 onClick={() => setIsServicesOpen((prev) => !prev)}
@@ -160,7 +162,7 @@ export default function Navbar() {
                         </div>
 
                         <div className="nav-dropdown-container">
-                            <button type="button" className="nav-item nav-mega-trigger">
+                            <button type="button" className={`nav-item nav-mega-trigger ${isHoroscopeRoute ? 'active' : ''}`}>
                                 Horoscope <FiChevronDown />
                             </button>
                             <div className="nav-dropdown-menu">
@@ -180,10 +182,10 @@ export default function Navbar() {
                             </div>
                         </div>
 
-                        <Link to="/panchang" className="nav-item">Daily Panchang</Link>
-                        <Link to="/numerology" className="nav-item">Numerology</Link>
-                        <Link to="/reports" className="nav-item">Reports</Link>
-                        <Link to="/blog" className="nav-item">Blog</Link>
+                        <NavLink to="/panchang" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>Daily Panchang</NavLink>
+                        <NavLink to="/numerology" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>Numerology</NavLink>
+                        <NavLink to="/reports" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>Reports</NavLink>
+                        <NavLink to="/blog" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>Blog</NavLink>
                     </nav>
 
                     {/* Right Side Actions */}

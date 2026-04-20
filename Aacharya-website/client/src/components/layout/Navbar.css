@@ -112,6 +112,10 @@
     color: var(--gold-primary);
 }
 
+.nav-item.active {
+    color: var(--gold-primary);
+}
+
 .header-buttons {
     display: flex;
     gap: 0.75rem;
