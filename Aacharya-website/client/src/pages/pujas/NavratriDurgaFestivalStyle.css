@@ -20,7 +20,7 @@
 .nd-h1 { font-size: clamp(2rem, 4vw, 3.8rem); margin: 0 0 12px; }
 .nd-h2 { font-size: clamp(1.6rem, 2.7vw, 2.4rem); margin: 0 0 16px; }
 
-.nd-hero { position: relative; min-height: 88vh; display: grid; align-items: center; overflow: hidden; }
+.nd-hero { position: relative; min-height: 88vh; display: grid; align-items: center; overflow: hidden; padding-top: calc(var(--header-height, 120px) - 4px); }
 .nd-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: saturate(1.05); }
 .nd-hero-overlay { position: absolute; inset: 0; background: linear-gradient(120deg, rgba(10, 5, 7, 0.82), rgba(72, 17, 26, 0.64)); }
 .nd-aura { position: absolute; width: 340px; height: 340px; border-radius: 999px; background: radial-gradient(circle, rgba(227,183,91,.42) 0%, rgba(227,183,91,0) 70%); top: 16%; right: 9%; }

@@ -1,7 +1,7 @@
 import FestivalPujaLayout from './FestivalPujaLayout'
 import './FestivalPujaLayout.css'
-import heroImg from '../../assets/all_puja_bg.webp'
-import sideImg from '../../assets/puja/puja-samagri.jpg'
+import heroImg from '../../assets/makkar sakranti.png'
+import sideImg from '../../assets/makkar sakranti 2.png'
 import ritualImg from '../../assets/puja/pandit-ritual.png'
 
 const PACKAGES = [

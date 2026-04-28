@@ -1,7 +1,7 @@
 import FestivalPujaLayout from './FestivalPujaLayout'
 import './FestivalPujaLayout.css'
-import heroImg from '../../assets/all_puja_bg.webp'
-import sideImg from '../../assets/puja/pandit.jpg'
+import heroImg from '../../assets/chhath puja.png'
+import sideImg from '../../assets/chhath puja 2.png'
 import ritualImg from '../../assets/puja/diyas-row.jpg'
 
 const PACKAGES = [

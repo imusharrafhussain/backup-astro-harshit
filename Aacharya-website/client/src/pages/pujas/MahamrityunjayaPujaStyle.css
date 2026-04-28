@@ -38,7 +38,7 @@ body.mm-page-active .header-bottom {
   align-items: center;
   margin-top: 0;
 }
-.mm-hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(32, 13, 9, 0.45), rgba(32, 13, 9, 0.9)); }
+.mm-hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(32, 13, 9, 0.45), rgba(32, 13, 9, 0.9)); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
 .mm-hero-content { position: relative; z-index: 2; width: min(980px, 92%); margin: 0 auto; text-align: center; color: #f7e8d3; }
 .mm-badge { display: inline-block; margin: 0 0 14px; padding: 7px 14px; border-radius: 999px; background: rgba(215, 162, 71, 0.25); border: 1px solid rgba(215, 162, 71, 0.7); color: #f2d48f; font-weight: 700; }
 .mm-hero h1 { margin: 0; font-size: clamp(2.4rem, 7vw, 5.8rem); line-height: 1.02; letter-spacing: -0.02em; color: #fff5e5; }

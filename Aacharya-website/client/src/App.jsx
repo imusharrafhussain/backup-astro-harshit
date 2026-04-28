@@ -83,6 +83,8 @@ import ChhathPujaPage from './pages/pujas/ChhathPujaPage';
 import MahaShivratriPujasPujaPage from './pages/pujas/MahaShivratriPujasPujaPage';
 import SaraswatiPujaPage from './pages/pujas/SaraswatiPujaPage';
 import KarwaChauthPujaPage from './pages/pujas/KarwaChauthPujaPage';
+import './pages/pujas/PujaResponsiveOverrides.css'
+import './ResponsiveFix.css'
 
 import FloatingChatbot from './components/FloatingChatbot'
 

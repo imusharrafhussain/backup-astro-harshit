@@ -27,6 +27,7 @@
   min-height: 86vh;
   display: grid;
   align-items: center;
+  padding-top: calc(var(--header-height, 120px) - 4px);
   background-image: var(--festival-hero-image);
   background-size: cover;
   background-position: center;
@@ -37,6 +38,8 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(115deg, rgba(12, 7, 4, 0.87), rgba(130, 59, 31, 0.52));
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .festival-hero-content {
@@ -122,8 +125,7 @@
 .festival-image-card img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .festival-grid {

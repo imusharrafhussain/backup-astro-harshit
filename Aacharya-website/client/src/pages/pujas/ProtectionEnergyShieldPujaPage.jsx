@@ -17,8 +17,8 @@ import {
     FiUser,
     FiUsers,
 } from 'react-icons/fi'
-import heroImage from '../../assets/all_puja_bg.webp'
-import shivaImage from '../../assets/puja/temple-gopuram.png'
+import heroImage from '../../assets/protection energy.jpg.jpeg'
+import shivaImage from '../../assets/protection energy 2.jpg.jpeg'
 import havanImage from '../../assets/puja/havan-kund.png'
 import './MahamrityunjayaPujaStyle.css'
 

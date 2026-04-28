@@ -17,7 +17,7 @@
 .ch-section { padding: 74px 0; position: relative; }
 .ch-font-display { font-family: Georgia, "Times New Roman", serif; }
 
-.ch-hero { min-height: 92vh; position: relative; overflow: hidden; display: grid; align-items: center; }
+.ch-hero { min-height: 92vh; position: relative; overflow: hidden; display: grid; align-items: center; padding-top: calc(var(--header-height, 120px) - 4px); }
 .ch-hero-bg { position: absolute; inset: 0; }
 .ch-hero-bg img { width: 100%; height: 100%; object-fit: cover; }
 .ch-hero-overlay-a { position: absolute; inset: 0; background: linear-gradient(120deg, rgba(10,6,4,.87), rgba(122,49,25,.55)); }
