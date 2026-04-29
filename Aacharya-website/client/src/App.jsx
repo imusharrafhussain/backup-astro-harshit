@@ -11,6 +11,7 @@ import VastuConsultationPage from './pages/VastuConsultationPage'
 import PalmistryPage from './pages/PalmistryPage'
 import FaceReadingPage from './pages/FaceReadingPage'
 import BookingPage from './pages/BookingPage'
+import BookPujaPage from './pages/BookPujaPage'
 import ReportsPage from './pages/ReportsPage'
 import ReportOrderPage from './pages/ReportOrderPage'
 import BlogPage from './pages/BlogPage'
@@ -170,6 +171,7 @@ function App() {
               <Route path="/puja/maha-shivratri-pujas-puja" element={<MahaShivratriPujasPujaPage />} />
               <Route path="/puja/saraswati-puja" element={<SaraswatiPujaPage />} />
               <Route path="/puja/karwa-chauth-puja" element={<KarwaChauthPujaPage />} />
+                    <Route path="/book-puja" element={<BookPujaPage />} />
                     <Route path="/book" element={<BookingPage />} />
                     <Route path="/reports" element={<ReportsPage />} />
                     <Route path="/reports/order/:reportId" element={<ReportOrderPage />} />
