@@ -470,13 +470,13 @@ export default function Navbar() {
                                     style={{ flex: 1, border: 'none', background: 'transparent', outline: 'none', fontSize: '0.9rem' }}
                                 />
                             </div>
-                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', padding: '0 1rem 0.5rem' }}>
+                            <div className="puja-mobile-cats" style={{ display: 'flex', overflowX: 'auto', gap: '0.4rem', padding: '0 1rem 0.5rem', whiteSpace: 'nowrap', WebkitOverflowScrolling: 'touch', scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                                 {pujaCategories.map(cat => (
                                     <button
                                         key={cat.id}
                                         onClick={() => setPujaCategory(cat.id)}
                                         style={{
-                                            padding: '0.35rem 0.8rem', borderRadius: '20px', fontSize: '0.8rem', cursor: 'pointer', fontWeight: 600,
+                                            flexShrink: 0, padding: '0.35rem 0.8rem', borderRadius: '20px', fontSize: '0.8rem', cursor: 'pointer', fontWeight: 600,
                                             background: pujaCategory === cat.id ? '#5D1916' : 'rgba(255,255,255,0.9)',
                                             color: pujaCategory === cat.id ? '#fff' : '#5D1916',
                                             border: pujaCategory === cat.id ? '1px solid #D4AF37' : '1px solid rgba(212,175,55,0.5)',
@@ -485,7 +485,7 @@ export default function Navbar() {
                                     >{cat.name}</button>
                                 ))}
                             </div>
-                            <div className="puja-mega-grid-items" style={{ padding: '0 1rem', maxHeight: 'calc(100vh - 220px)' }}>
+                            <div className="puja-mega-grid-items" style={{ padding: '0 0.5rem', maxHeight: 'calc(100vh - 220px)' }}>
                                 {filteredPujas.map(puja => (
                                     <Link
                                         key={puja.id}
