@@ -455,49 +455,54 @@ export default function Navbar() {
 
                 {hamburgerView === 'puja' ? (
                     /* ── Puja mega panel in mobile hamburger ── */
-                    <>
-                        <button className="hamburger-mega-back-btn" onClick={() => setHamburgerView('main')}>
-                            &#8592;&nbsp;Book Puja
-                        </button>
-                        <div className="puja-mega-search" style={{ margin: '0.5rem 1rem' }}>
-                            <FiSearch color="#aaa" />
-                            <input
-                                type="text"
-                                placeholder="Search Pujas..."
-                                value={pujaSearch}
-                                onChange={e => setPujaSearch(e.target.value)}
-                                style={{ flex: 1, border: 'none', background: 'transparent', outline: 'none', fontSize: '0.9rem' }}
-                            />
+                    <div style={{ ...getDynamicBgStyle(), minHeight: '100%', display: 'flex', flexDirection: 'column' }}>
+                        <div style={{ background: 'rgba(255,253,245,0.85)', backdropFilter: 'blur(10px)', flex: 1, paddingBottom: '2rem' }}>
+                            <button className="hamburger-mega-back-btn" onClick={() => setHamburgerView('main')}>
+                                &#8592;&nbsp;Book Puja
+                            </button>
+                            <div className="puja-mega-search" style={{ margin: '0.5rem 1rem', background: 'rgba(255,255,255,0.9)' }}>
+                                <FiSearch color="#aaa" />
+                                <input
+                                    type="text"
+                                    placeholder="Search Pujas..."
+                                    value={pujaSearch}
+                                    onChange={e => setPujaSearch(e.target.value)}
+                                    style={{ flex: 1, border: 'none', background: 'transparent', outline: 'none', fontSize: '0.9rem' }}
+                                />
+                            </div>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', padding: '0 1rem 0.5rem' }}>
+                                {pujaCategories.map(cat => (
+                                    <button
+                                        key={cat.id}
+                                        onClick={() => setPujaCategory(cat.id)}
+                                        style={{
+                                            padding: '0.35rem 0.8rem', borderRadius: '20px', fontSize: '0.8rem', cursor: 'pointer', fontWeight: 600,
+                                            background: pujaCategory === cat.id ? '#5D1916' : 'rgba(255,255,255,0.9)',
+                                            color: pujaCategory === cat.id ? '#fff' : '#5D1916',
+                                            border: pujaCategory === cat.id ? '1px solid #D4AF37' : '1px solid rgba(212,175,55,0.5)',
+                                            boxShadow: '0 2px 5px rgba(0,0,0,0.05)'
+                                        }}
+                                    >{cat.name}</button>
+                                ))}
+                            </div>
+                            <div className="puja-mega-grid-items" style={{ padding: '0 1rem', maxHeight: 'calc(100vh - 220px)' }}>
+                                {filteredPujas.map(puja => (
+                                    <Link
+                                        key={puja.id}
+                                        to={`/puja/${puja.slug}`}
+                                        className="puja-mega-item-card"
+                                        onClick={() => { setIsOpen(false); setHamburgerView('main'); setPujaSearch('') }}
+                                    >
+                                        <div className="puja-mega-item-icon">{puja.icon}</div>
+                                        <div className="puja-mega-item-details">
+                                            <h4>{puja.title}</h4>
+                                            <p>{puja.desc}</p>
+                                        </div>
+                                    </Link>
+                                ))}
+                            </div>
                         </div>
-                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', padding: '0 1rem 0.5rem' }}>
-                            {pujaCategories.map(cat => (
-                                <button
-                                    key={cat.id}
-                                    onClick={() => setPujaCategory(cat.id)}
-                                    style={{
-                                        padding: '0.3rem 0.75rem', borderRadius: '20px', fontSize: '0.78rem', cursor: 'pointer',
-                                        background: pujaCategory === cat.id ? '#5D1916' : 'rgba(93,25,22,0.08)',
-                                        color: pujaCategory === cat.id ? '#fff' : '#5D1916',
-                                        border: '1px solid rgba(93,25,22,0.2)'
-                                    }}
-                                >{cat.name}</button>
-                            ))}
-                        </div>
-                        <div className="hamburger-mega-grid" style={{ gridTemplateColumns: '1fr' }}>
-                            {filteredPujas.map(puja => (
-                                <Link
-                                    key={puja.id}
-                                    to={`/puja/${puja.slug}`}
-                                    className="hamburger-mega-card"
-                                    style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}
-                                    onClick={() => { setIsOpen(false); setHamburgerView('main'); setPujaSearch('') }}
-                                >
-                                    <span style={{ fontSize: '1.5rem' }}>{puja.icon}</span>
-                                    <span style={{ fontSize: '0.88rem', color: '#5D1916', fontWeight: 600 }}>{puja.title}</span>
-                                </Link>
-                            ))}
-                        </div>
-                    </>
+                    </div>
                 ) : hamburgerView === 'main' ? (
                     /* ── Main menu list ── */
                     <>
