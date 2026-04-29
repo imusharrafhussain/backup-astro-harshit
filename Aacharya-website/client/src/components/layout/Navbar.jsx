@@ -505,7 +505,9 @@ export default function Navbar() {
                             className="hamburger-link hamburger-accordion-btn"
                             onClick={() => setHamburgerView('puja')}
                         >
-                            <FiSun style={{ marginRight: '0.5rem' }} /><span>Book Puja</span>
+                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                                <FiSun style={{ marginRight: '0.5rem' }} /><span>Book Puja</span>
+                            </div>
                             <FiChevronDown className="hamburger-chevron" />
                         </button>
                         <button
