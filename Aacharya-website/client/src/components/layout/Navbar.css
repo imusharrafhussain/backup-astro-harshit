@@ -411,6 +411,10 @@
         gap: 4px;
         position: relative;
         z-index: 1; /* Keep fields above background but below glare */
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
     }
 
     .mobile-tab-icon {

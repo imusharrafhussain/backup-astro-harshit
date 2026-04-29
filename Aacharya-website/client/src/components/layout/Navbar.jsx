@@ -585,7 +585,7 @@ export default function Navbar() {
                 <span>Digital Mart</span>
             </NavLink>
             <button
-                className={`mobile-tab-link ${isPujaOpen ? 'active' : ''}`}
+                className={`mobile-tab-link ${(isPujaOpen || (isOpen && hamburgerView === 'puja')) ? 'active' : ''}`}
                 onClick={() => { setIsOpen(true); setHamburgerView('puja') }}
             >
                 <FiSun className="mobile-tab-icon" />
