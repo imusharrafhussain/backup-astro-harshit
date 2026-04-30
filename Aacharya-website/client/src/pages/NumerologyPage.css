@@ -1509,3 +1509,348 @@
         padding: 0.8rem;
     }
 }
+
+/* ═══════════════════════════════════════════════════
+   TABLET  (≤ 768px)
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+    /* Hero */
+    .np-hero__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+        padding-top: 3.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .np-hero__left {
+        max-width: none;
+    }
+
+    .np-hero__left h1 {
+        font-size: clamp(1.75rem, 6vw, 2.4rem);
+    }
+
+    .np-hero__sub,
+    .np-hero__trust {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .np-hero__right {
+        min-height: auto;
+    }
+
+    .np-hero__right-bg {
+        transform: translate(0, 30px);
+        background-position: center bottom;
+        opacity: 0.35;
+    }
+
+    .np-hero-card {
+        margin: 0 auto;
+        width: min(360px, 90%);
+    }
+
+    /* Ribbon — break out of absolute positioning */
+    .np-ribbon {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: rotate(-1deg);
+        width: 100%;
+        margin: 0 auto 1.5rem;
+        animation: none;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .np-ribbon:hover {
+        transform: rotate(0deg) scale(1.02);
+    }
+
+    /* Funnel form */
+    .np-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .np-teaser-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .np-visuals {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .np-funnel-bottom {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .np-compat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Two-panel info section */
+    .np-two-panel-row {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+    }
+
+    .np-left-panel,
+    .np-right-panel {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .np-right-panel {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        flex-direction: row;
+        border-radius: 12px;
+    }
+
+    .np-list-item {
+        border-bottom: 1px solid var(--border-subtle);
+        border-right: 1px solid var(--border-subtle);
+    }
+
+    .np-info-card {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        margin-top: -1rem;
+        border-radius: 14px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Benefits */
+    .np-benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .np-benefit-card {
+        padding: 1.4rem 1rem;
+    }
+
+    /* Specialist */
+    .np-specialist-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .np-testimonial-card {
+        border-left: none;
+        border-top: 5px solid var(--gold-primary);
+    }
+
+    /* CTA */
+    .np-cta-btn {
+        width: 100%;
+        min-width: 0;
+        padding: 0.9rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .np-fee-box {
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+
+/* ═══════════════════════════════════════════════════
+   SMALL MOBILE  (≤ 576px)
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 576px) {
+
+    /* Hero */
+    .np-hero__container {
+        padding-top: 2.5rem;
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .np-hero__left h1 {
+        font-size: clamp(1.6rem, 7vw, 2rem);
+        line-height: 1.2;
+    }
+
+    .np-hero__kicker {
+        font-size: 0.72rem;
+    }
+
+    .np-hero__sub {
+        font-size: 0.92rem;
+    }
+
+    .np-hero__cta {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .np-hero-card {
+        width: 100%;
+        border-radius: 16px;
+        padding: 1rem;
+    }
+
+    .np-hero__right-bg {
+        opacity: 0.25;
+    }
+
+    /* Ribbon */
+    .np-ribbon {
+        padding: 0.65rem 0.75rem 0.45rem;
+    }
+
+    .np-ribbon__main {
+        font-size: 0.88rem;
+    }
+
+    /* Funnel */
+    .np-funnel-section {
+        padding: 2rem 0;
+    }
+
+    .np-form-card,
+    .np-results-card,
+    .np-unlock-card,
+    .np-compat-card,
+    .np-spin-card {
+        border-radius: 14px;
+        padding: 1rem;
+    }
+
+    .np-timer {
+        position: sticky;
+        top: 60px;
+        z-index: 10;
+        backdrop-filter: blur(8px);
+        margin-bottom: 1.2rem;
+        font-size: 0.85rem;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+    }
+
+    .np-main-number {
+        font-size: 2.2rem;
+    }
+
+    .np-teaser-item {
+        padding: 0.75rem;
+    }
+
+    .np-teaser-item h3 {
+        font-size: 0.92rem;
+    }
+
+    .np-teaser-item p {
+        font-size: 0.84rem;
+    }
+
+    .np-visuals {
+        grid-template-columns: 1fr;
+    }
+
+    .np-chart {
+        min-height: 90px;
+    }
+
+    /* Two-panel */
+    .np-info-wrapper {
+        padding: 0 1rem;
+    }
+
+    .np-right-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .np-list-item {
+        padding: 0.8rem 1rem;
+    }
+
+    /* Benefits */
+    .np-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .np-benefit-card {
+        padding: 1.2rem 1rem;
+    }
+
+    /* Specialist */
+    .np-specialist-text {
+        font-size: 0.95rem;
+    }
+
+    .np-specialist-item {
+        font-size: 0.9rem;
+    }
+
+    /* CTA */
+    .np-cta-title {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .np-cta-sub {
+        font-size: 0.92rem;
+    }
+
+    .np-fee-amount {
+        font-size: 2.2rem;
+    }
+}
+
+/* ═══════════════════════════════════════════════════
+   EXTRA SMALL  (≤ 360px)
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 360px) {
+
+    .np-hero__left h1 {
+        font-size: 1.45rem;
+    }
+
+    .np-hero__sub {
+        font-size: 0.88rem;
+    }
+
+    .np-hero-card {
+        padding: 0.85rem;
+    }
+
+    .np-ribbon__main {
+        font-size: 0.8rem;
+        white-space: normal;
+    }
+
+    .np-form-card,
+    .np-results-card,
+    .np-unlock-card,
+    .np-compat-card,
+    .np-spin-card {
+        padding: 0.85rem;
+    }
+
+    .np-decode-btn,
+    .np-unlock-btn {
+        font-size: 0.9rem;
+        height: 44px;
+    }
+
+    .np-wheel {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+
+    .np-fee-amount {
+        font-size: 1.9rem;
+    }
+
+    .np-cta-title {
+        font-size: 1.3rem;
+    }
+}
