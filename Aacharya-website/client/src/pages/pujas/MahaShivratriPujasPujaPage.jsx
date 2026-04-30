@@ -3,9 +3,9 @@ import { Award, Check, Flame, HeartHandshake, ShieldCheck, Sparkles, Moon, Users
 import { FiUser, FiPhone, FiMapPin, FiCalendar, FiClock, FiMessageSquare, FiCheck } from "react-icons/fi";
 import { toast } from "react-hot-toast";
 import "./MahaShivratriFestivalStyle.css";
-import heroImg from "../../assets/puja/shiva-hero.webp';
-import ritualImg from "../../assets/puja/shiva-ritual.webp';
-import samagriImg from "../../assets/puja/shiva-samagri.webp';
+import heroImg from '../../assets/puja/shiva-hero.webp';
+import ritualImg from '../../assets/puja/shiva-ritual.webp';
+import samagriImg from '../../assets/puja/shiva-samagri.webp';
 
 const PACKAGES = [
   {
