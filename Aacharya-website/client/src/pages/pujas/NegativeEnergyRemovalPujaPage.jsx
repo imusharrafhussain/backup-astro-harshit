@@ -17,9 +17,9 @@ import {
     FiUser,
     FiUsers,
 } from 'react-icons/fi'
-import heroImage from '../../assets/negative energy.jpg.jpeg'
-import shivaImage from '../../assets/negative energy 2.jpg.jpeg'
-import havanImage from '../../assets/puja/havan-kund.png'
+import heroImage from '../../assets/negative energy.webp'
+import shivaImage from '../../assets/negative energy 2.webp'
+import havanImage from '../../assets/puja/havan-kund.webp'
 import './MahamrityunjayaPujaStyle.css'
 
 const PUJA_ID = "negative-energy-removal-puja"

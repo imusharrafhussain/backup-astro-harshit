@@ -18,8 +18,8 @@ import {
   FiUser,
   FiUsers,
 } from 'react-icons/fi'
-import heroImage from '../../assets/kaal sharp dosh.jpg.jpeg'
-import ritualImage from '../../assets/kal sharp dosh 2.jpg.jpeg'
+import heroImage from '../../assets/kaal sharp dosh.webp'
+import ritualImage from '../../assets/kal sharp dosh 2.webp'
 import './KaalSarpDoshPujaStyle.css'
 
 const PUJA_ID = 'kaal-sarp-dosh-puja'

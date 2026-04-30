@@ -1,8 +1,8 @@
 import FestivalPujaLayout from './FestivalPujaLayout'
 import './FestivalPujaLayout.css'
-import heroImg from '../../assets/makkar sakranti.png'
-import sideImg from '../../assets/makkar sakranti 2.png'
-import ritualImg from '../../assets/puja/pandit-ritual.png'
+import heroImg from '../../assets/makkar sakranti.webp'
+import sideImg from '../../assets/makkar sakranti 2.webp'
+import ritualImg from '../../assets/puja/pandit-ritual.webp'
 
 const PACKAGES = [
   { id: 'basic', name: 'Sankranti Basic', price: 2100, duration: '75 min', features: ['Surya sankalp', 'Til-gud offering', 'Basic havan', 'Prasad blessing'] },

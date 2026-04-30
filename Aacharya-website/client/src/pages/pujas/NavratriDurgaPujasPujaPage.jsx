@@ -1,8 +1,8 @@
 import FestivalPujaLayout from './FestivalPujaLayout'
 import './FestivalPujaLayout.css'
-import heroImg from '../../assets/navratri puja 2.png'
-import sideImg from '../../assets/navratri puja.png'
-import ritualImg from '../../assets/puja/pandit-ritual.png'
+import heroImg from '../../assets/navratri puja 2.webp'
+import sideImg from '../../assets/navratri puja.webp'
+import ritualImg from '../../assets/puja/pandit-ritual.webp'
 
 const PACKAGES = [
   { id: 'basic', name: 'Shakti Basic', price: 2100, duration: '90 min', features: ['Personal sankalp', 'Durga mantra paath', 'Basic samagri', 'Aarti and prasad'] },

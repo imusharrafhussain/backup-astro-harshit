@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { GiSunrise, GiFlame, GiHealing, GiCoins, GiShield, GiScrollUnfurled } from 'react-icons/gi'
 import { FiUser, FiPhone, FiMail, FiMapPin, FiCalendar, FiClock, FiMessageSquare, FiCheck, FiAlertCircle, FiLoader } from 'react-icons/fi'
-import suryaHero from '../assets/surya.png'
+import suryaHero from '../assets/surya.webp'
 import './SuryaPujaPage.css'
 
 const PUJA_ID = 'surya-puja'

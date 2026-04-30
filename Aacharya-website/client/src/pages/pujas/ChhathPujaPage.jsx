@@ -1,8 +1,8 @@
 import FestivalPujaLayout from './FestivalPujaLayout'
 import './FestivalPujaLayout.css'
-import heroImg from '../../assets/chhath puja.png'
-import sideImg from '../../assets/chhath puja 2.png'
-import ritualImg from '../../assets/puja/diyas-row.jpg'
+import heroImg from '../../assets/chhath puja.webp'
+import sideImg from '../../assets/chhath puja 2.webp'
+import ritualImg from '../../assets/puja/diyas-row.webp'
 
 const PACKAGES = [
   { id: 'basic', name: 'Chhath Basic', price: 2100, duration: '90 min', features: ['Surya arghya sankalp', 'Basic mantra paath', 'Essential samagri guidance', 'Aarti and blessings'] },

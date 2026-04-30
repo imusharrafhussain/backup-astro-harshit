@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { GiCoins, GiStairsGoal, GiHealthNormal, GiSparkles, GiLotus, GiCrown, GiSunrise } from 'react-icons/gi'
 import { FiUser, FiPhone, FiMail, FiMapPin, FiCalendar, FiClock, FiMessageSquare, FiCheck, FiAlertCircle, FiLoader } from 'react-icons/fi'
-import heroImage from '../../assets/guru puja.png';
+import heroImage from '../../assets/guru puja.webp';
 import './GenericPujaPage.css'
 
 const PUJA_ID = 'guru-puja'

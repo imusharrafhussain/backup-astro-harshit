@@ -1,4 +1,4 @@
-import faceHeroImage from '../assets/facereadingBg.png'
+import faceHeroImage from '../assets/facereadingBg.webp'
 import ServiceShowcasePage from './ServiceShowcasePage'
 
 const config = {

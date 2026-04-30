@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import API from '../api/axios'
 import heroKundliM from '../assets/heroKundliM.webp'
-import defaultAvatar from '../assets/default_avatar.png'
+import defaultAvatar from '../assets/default_avatar.webp'
 import './KundliMatchingPage.css'
 
 /* ═══════════════════════════════════════════════

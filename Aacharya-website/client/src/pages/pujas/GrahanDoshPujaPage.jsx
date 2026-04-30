@@ -14,8 +14,8 @@ import {
   FiUser,
   FiUsers,
 } from 'react-icons/fi'
-import heroImage from '../../assets/grahan dosh pooja.jpg.jpeg'
-import ritualImage from '../../assets/grahan dosh pooja 2.jpg.jpeg'
+import heroImage from '../../assets/grahan dosh pooja.webp'
+import ritualImage from '../../assets/grahan dosh pooja 2.webp'
 import './KaalSarpDoshPujaStyle.css'
 
 const PUJA_ID = "grahan-dosh-puja"

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { GiSoundWaves, GiBrain, GiCoins, GiBookAura, GiCrown, GiHealthNormal, GiSunrise } from 'react-icons/gi'
 import { FiUser, FiPhone, FiMail, FiMapPin, FiCalendar, FiClock, FiMessageSquare, FiCheck, FiAlertCircle, FiLoader } from 'react-icons/fi'
-import heroImage from '../../assets/budh graha puja.png';
+import heroImage from '../../assets/budh graha puja.webp';
 import './GenericPujaPage.css'
 
 const PUJA_ID = 'budh-puja'

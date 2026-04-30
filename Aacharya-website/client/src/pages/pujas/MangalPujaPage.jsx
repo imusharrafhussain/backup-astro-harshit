@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { GiShield, GiMuscularTorso, GiHealthNormal, GiHouseKeys, GiStairsGoal, GiCrown, GiSunrise } from 'react-icons/gi'
 import { FiUser, FiPhone, FiMail, FiMapPin, FiCalendar, FiClock, FiMessageSquare, FiCheck, FiAlertCircle, FiLoader } from 'react-icons/fi'
-import heroImage from '../../assets/mangal puja.png';
+import heroImage from '../../assets/mangal puja.webp';
 import './GenericPujaPage.css'
 
 const PUJA_ID = 'mangal-puja'

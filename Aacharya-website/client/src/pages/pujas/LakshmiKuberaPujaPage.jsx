@@ -16,7 +16,7 @@ import {
   FiAward,
 } from 'react-icons/fi'
 import { GiSparkles, GiFlame, GiLotus, GiReceiveMoney } from 'react-icons/gi'
-import heroImage from '../../assets/lakshmi kuber puja.png'
+import heroImage from '../../assets/lakshmi kuber puja.webp'
 import pujaImage from '../../Marriage/lakshmi kuber.webp'
 import mandalaImage from '../../Marriage/lakshmi kuber.webp'
 import './LakshmiPraptiStyle.css'

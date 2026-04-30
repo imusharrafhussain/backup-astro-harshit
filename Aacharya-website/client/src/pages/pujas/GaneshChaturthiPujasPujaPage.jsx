@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { FiUser, FiPhone, FiMail, FiMapPin, FiCalendar, FiClock, FiMessageSquare, FiCheck, FiAlertCircle, FiLoader } from 'react-icons/fi'
 import { CheckCircle2, Sprout, TrendingUp, BookOpen, HeartHandshake, Shield, Award, Users, Star, Flame } from 'lucide-react'
-import heroImage from '../../assets/puja/hero-ganesh.png'
-import murtiImage from '../../assets/puja/ganesha-murti.png'
-import ritualImage from '../../assets/puja/pandit-ritual.png'
+import heroImage from '../../assets/puja/hero-ganesh.webp'
+import murtiImage from '../../assets/puja/ganesha-murti.webp'
+import ritualImage from '../../assets/puja/pandit-ritual.webp'
 import './GaneshChaturthiFestivalStyle.css'
 
 const PUJA_ID = 'ganesh-chaturthi-pujas-puja'

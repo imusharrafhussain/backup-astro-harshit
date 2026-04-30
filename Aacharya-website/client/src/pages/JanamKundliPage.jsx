@@ -1,4 +1,4 @@
-import heroKundliM from '../assets/janam_kundali_hero.jpg'
+import heroKundliM from '../assets/janam_kundali_hero.webp'
 import ServiceShowcasePage from './ServiceShowcasePage'
 
 const config = {

@@ -3,12 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import '../App.css';
 import './NumerologyPage.css';
-import destiny from '../assets/destiny_number.png';
-import lifePath from '../assets/life_path_number.png';
-import soulUrge from '../assets/soul_number.png';
-import personality from '../assets/personality_number.png';
-import birthday from '../assets/birthday_number.png';
-import maturity from '../assets/maturity_number.png';
+import destiny from '../assets/destiny_number.webp';
+import lifePath from '../assets/life_path_number.webp';
+import soulUrge from '../assets/soul_number.webp';
+import personality from '../assets/personality_number.webp';
+import birthday from '../assets/birthday_number.webp';
+import maturity from '../assets/Maturity_number.webp';
 import numerologyBg from '../assets/numerologyBg.webp';
 
 /* ────────────────────────────────────────────────

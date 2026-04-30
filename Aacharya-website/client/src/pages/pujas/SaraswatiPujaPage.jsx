@@ -3,8 +3,8 @@ import { Award, Check, BookOpen, Brain, Music, PenTool, Sparkles, ShieldCheck, U
 import { FiUser, FiPhone, FiMapPin, FiCalendar, FiClock, FiMessageSquare, FiCheck } from "react-icons/fi";
 import { toast } from "react-hot-toast";
 import "./SaraswatiFestivalStyle.css";
-import heroImg from "../../assets/puja/saraswati-hero.jpg";
-import samagriImg from "../../assets/puja/puja-samagri.jpg";
+import heroImg from "../../assets/puja/saraswati-hero.webp';
+import samagriImg from "../../assets/puja/puja-samagri.webp';
 
 const PACKAGES = [
   {

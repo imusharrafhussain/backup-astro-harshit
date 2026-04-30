@@ -16,7 +16,7 @@ import {
   FiAward,
 } from 'react-icons/fi'
 import { GiSparkles, GiFlame, GiLotus, GiReceiveMoney } from 'react-icons/gi'
-import heroImage from '../../assets/financial stability.png'
+import heroImage from '../../assets/financial stability.webp'
 import pujaImage from '../../Marriage/business.webp'
 import mandalaImage from '../../Marriage/job.webp'
 import './LakshmiPraptiStyle.css'

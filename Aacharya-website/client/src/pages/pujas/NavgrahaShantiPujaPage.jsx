@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { GiLotus, GiShield, GiSparkles, GiCoins, GiSunrise } from 'react-icons/gi'
 import { FiUser, FiPhone, FiMail, FiMapPin, FiCalendar, FiClock, FiMessageSquare, FiCheck, FiAlertCircle, FiLoader } from 'react-icons/fi'
-import heroImage from '../../assets/navgraha shanti puja.png';
+import heroImage from '../../assets/navgraha shanti puja.webp';
 import './GenericPujaPage.css'
 
 const PUJA_ID = 'navgraha-shanti-puja'

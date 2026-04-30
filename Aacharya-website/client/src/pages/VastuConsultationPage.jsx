@@ -1,5 +1,5 @@
 import ServiceShowcasePage from './ServiceShowcasePage'
-import vastuBg from '../assets/vastupageBg.png'
+import vastuBg from '../assets/vastupageBg.webp'
 
 const config = {
   variant: 'vastu',

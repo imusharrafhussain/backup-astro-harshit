@@ -17,9 +17,9 @@ import {
     FiUser,
     FiUsers,
 } from 'react-icons/fi'
-import heroImage from '../../assets/nazar dosh removal pooja.jpg.jpeg'
-import shivaImage from '../../assets/nazar dosh removal pooja 2.jpg.jpeg'
-import havanImage from '../../assets/puja/havan-kund.png'
+import heroImage from '../../assets/nazar dosh removal pooja.webp'
+import shivaImage from '../../assets/nazar dosh removal pooja 2.webp'
+import havanImage from '../../assets/puja/havan-kund.webp'
 import './MahamrityunjayaPujaStyle.css'
 
 const PUJA_ID = "nazar-dosh-removal-puja"

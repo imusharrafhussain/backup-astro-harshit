@@ -1,8 +1,8 @@
 import FestivalPujaLayout from './FestivalPujaLayout'
 import './FestivalPujaLayout.css'
-import heroImg from '../../assets/karwa chauth pooja.jpg.jpeg'
-import sideImg from '../../assets/karwa chauth pooja 2.jpg.jpeg'
-import ritualImg from '../../assets/puja/puja-samagri.jpg'
+import heroImg from '../../assets/karwa chauth pooja.webp'
+import sideImg from '../../assets/karwa chauth pooja 2.webp'
+import ritualImg from '../../assets/puja/puja-samagri.webp'
 
 const PACKAGES = [
   { id: 'basic', name: 'Karwa Basic', price: 2100, duration: '75 min', features: ['Karwa sankalp', 'Basic vrat katha paath', 'Traditional aarti', 'Blessing mantra'] },

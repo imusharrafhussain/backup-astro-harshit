@@ -12,10 +12,10 @@ import {
   FiLoader,
 } from 'react-icons/fi'
 import './DiwaliFestivalPujaStyle.css'
-import heroImg from '../../assets/puja/hero-lakshmi.jpg'
-import diyasRow from '../../assets/puja/diyas-row.jpg'
-import samagriImg from '../../assets/puja/samagri.jpg'
-import panditImg from '../../assets/puja/pandit.jpg'
+import heroImg from '../../assets/puja/hero-lakshmi.webp'
+import diyasRow from '../../assets/puja/diyas-row.webp'
+import samagriImg from '../../assets/puja/samagri.webp'
+import panditImg from '../../assets/puja/pandit.webp'
 
 const PUJA_ID = 'diwali-lakshmi-puja'
 const PUJA_NAME = 'Diwali Lakshmi Puja'
