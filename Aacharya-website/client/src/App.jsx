@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
+import ScrollToTop from './components/ScrollToTop'
 
 import { AuthProvider } from './context/AuthContext'
 
@@ -99,6 +100,7 @@ const KarwaChauthPujaPage = lazy(() => import('./pages/pujas/KarwaChauthPujaPage
 function App() {
     return (
         <AuthProvider>
+            <ScrollToTop />
             <Navbar />
             <FloatingChatbot />
             <main>

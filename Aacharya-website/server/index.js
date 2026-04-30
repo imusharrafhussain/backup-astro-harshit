@@ -11,12 +11,27 @@ const app = express();
 // ── Security ──
 app.use(helmet({
     contentSecurityPolicy: {
-        useDefaults: true,
+        useDefaults: false,
         directives: {
-            "img-src": ["'self'", "data:", "https:"],
+            defaultSrc:    ["'self'"],
+            scriptSrc:     ["'self'", "'unsafe-inline'"],
+            styleSrc:      ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+            fontSrc:       ["'self'", 'https://fonts.gstatic.com'],
+            imgSrc:        ["'self'", 'data:', 'blob:', 'https:'],
+            connectSrc:    ["'self'"],
+            frameSrc:      ["'none'"],
+            objectSrc:     ["'none'"],
+            upgradeInsecureRequests: [],
         },
     },
-    crossOriginResourcePolicy: { policy: 'cross-origin' },
+    // Prevents other sites from embedding/hotlinking our assets
+    crossOriginResourcePolicy: { policy: 'same-site' },
+    // Prevent MIME-type sniffing of webp/images
+    noSniff: true,
+    // Prevent clickjacking
+    frameguard: { action: 'sameorigin' },
+    // Control referrer to prevent asset URL leaking to external sites
+    referrerPolicy: { policy: 'strict-origin-when-cross-origin' },
 }));
 const allowedOrigins = [
     process.env.CLIENT_URL || 'http://localhost:5173',

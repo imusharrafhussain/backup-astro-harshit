@@ -21,6 +21,16 @@ export default defineConfig({
                 changeOrigin: true,
             },
         },
+        headers: {
+            // Prevent MIME-type sniffing
+            'X-Content-Type-Options': 'nosniff',
+            // Only allow images to be loaded from same origin (prevents hotlinking)
+            'Content-Security-Policy': "default-src 'self'; img-src 'self' data: blob: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;",
+            // Prevent embedding in iframes (clickjacking)
+            'X-Frame-Options': 'SAMEORIGIN',
+            // Control referrer info to prevent asset URL leaking
+            'Referrer-Policy': 'strict-origin-when-cross-origin',
+        },
     },
     build: {
         rollupOptions: {
@@ -40,5 +50,8 @@ export default defineConfig({
                 },
             },
         },
+        // Ensure asset filenames include content hash for cache busting
+        assetsInlineLimit: 4096,
     },
 })
+
