@@ -454,54 +454,76 @@ export default function Navbar() {
             <div ref={hamburgerMenuRef} className={`hamburger-menu${isOpen ? ' open' : ''}`}>
 
                 {hamburgerView === 'puja' ? (
-                    /* ── Puja mega panel in mobile hamburger ── */
-                    <div style={{ ...getDynamicBgStyle(), minHeight: '100%', display: 'flex', flexDirection: 'column' }}>
-                        <div style={{ background: 'rgba(255,253,245,0.85)', backdropFilter: 'blur(10px)', flex: 1, paddingBottom: '2rem' }}>
-                            <button className="hamburger-mega-back-btn" onClick={() => setHamburgerView('main')}>
-                                &#8592;&nbsp;Book Puja
-                            </button>
-                            <div className="puja-mega-search" style={{ margin: '0.5rem 1rem', background: 'rgba(255,255,255,0.9)' }}>
-                                <FiSearch color="#aaa" />
-                                <input
-                                    type="text"
-                                    placeholder="Search Pujas..."
-                                    value={pujaSearch}
-                                    onChange={e => setPujaSearch(e.target.value)}
-                                    style={{ flex: 1, border: 'none', background: 'transparent', outline: 'none', fontSize: '0.9rem' }}
-                                />
-                            </div>
-                            <div className="puja-mobile-cats-container" style={{ display: 'flex', overflowX: 'auto', gap: '0.4rem', padding: '0 1rem 0.5rem', scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}>
+                    /* ── Miniature Puja mega panel in mobile hamburger ── */
+                    <div style={{ padding: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100%' }}>
+                        <div style={{ ...getDynamicBgStyle(), display: 'flex', flexDirection: 'row', width: '100%', maxWidth: '340px', height: '450px', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.2)' }}>
+                            <div style={{ width: '38%', flexShrink: 0, overflowY: 'auto', background: 'rgba(255,255,255,0.65)', borderRight: '1px solid rgba(212,175,55,0.2)', display: 'flex', flexDirection: 'column', padding: '0.5rem 0' }} className="mini-mega-scrollbar">
+                                <button className="hamburger-mega-back-btn" onClick={() => setHamburgerView('main')} style={{ padding: '0.5rem', fontSize: '0.75rem', background: 'transparent', borderBottom: '1px solid rgba(212,175,55,0.2)', borderTop: 'none', borderLeft: 'none', borderRight: 'none', display: 'flex', alignItems: 'center', gap: '0.3rem', fontWeight: 'bold' }}>
+                                    &#8592; Back
+                                </button>
                                 {pujaCategories.map(cat => (
                                     <button
                                         key={cat.id}
                                         onClick={() => setPujaCategory(cat.id)}
-                                        style={{
-                                            flexShrink: 0, whiteSpace: 'nowrap',
-                                            padding: '0.35rem 0.8rem', borderRadius: '20px', fontSize: '0.8rem', cursor: 'pointer', fontWeight: 600,
-                                            background: pujaCategory === cat.id ? '#5D1916' : 'rgba(255,255,255,0.9)',
-                                            color: pujaCategory === cat.id ? '#fff' : '#5D1916',
-                                            border: pujaCategory === cat.id ? '1px solid #D4AF37' : '1px solid rgba(212,175,55,0.5)',
-                                            boxShadow: '0 2px 5px rgba(0,0,0,0.05)'
+                                        style={{ 
+                                            padding: '0.6rem 0.5rem', 
+                                            fontSize: '0.65rem', 
+                                            textAlign: 'left',
+                                            background: pujaCategory === cat.id ? 'rgba(255,255,255,0.9)' : 'transparent',
+                                            color: '#5D1916',
+                                            border: 'none',
+                                            borderLeft: pujaCategory === cat.id ? '3px solid #D4AF37' : '3px solid transparent',
+                                            fontWeight: pujaCategory === cat.id ? 'bold' : 'normal',
+                                            display: 'flex',
+                                            justifyContent: 'space-between',
+                                            alignItems: 'center',
+                                            cursor: 'pointer'
                                         }}
-                                    >{cat.name}</button>
+                                    >
+                                        {cat.name}
+                                        {pujaCategory === cat.id && <FiChevronRight style={{ color: '#D4AF37' }} />}
+                                    </button>
                                 ))}
                             </div>
-                            <style>{`.puja-mobile-cats-container::-webkit-scrollbar { display: none; }`}</style>
-                            <div className="puja-mega-grid-items" style={{ padding: '0 1rem', maxHeight: 'calc(100vh - 220px)' }}>
-                                {filteredPujas.map(puja => (
-                                    <Link
-                                        key={puja.id}
-                                        to={`/puja/${puja.slug}`}
-                                        className="puja-mega-item-card"
-                                        onClick={() => { setIsOpen(false); setHamburgerView('main'); setPujaSearch('') }}
-                                    >
-                                        <div className="puja-mega-item-icon">{puja.icon}</div>
-                                        <div className="puja-mega-item-details">
-                                            <h4>{puja.title}</h4>
-                                            <p>{puja.desc}</p>
-                                        </div>
-                                    </Link>
-                                ))}
+                            <div style={{ width: '62%', padding: '0.5rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', overflow: 'hidden' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', background: 'rgba(255,255,255,0.9)', border: '1px solid rgba(212,175,55,0.35)', borderRadius: '6px', padding: '0.3rem 0.5rem' }}>
+                                    <FiSearch color="#aaa" size={12} />
+                                    <input
+                                        type="text"
+                                        placeholder="Search Pujas..."
+                                        value={pujaSearch}
+                                        onChange={e => setPujaSearch(e.target.value)}
+                                        style={{ border: 'none', background: 'transparent', outline: 'none', fontSize: '0.7rem', width: '100%', color: '#333' }}
+                                    />
+                                </div>
+                                <div className="mini-mega-scrollbar" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0.4rem', overflowY: 'auto', paddingRight: '2px' }}>
+                                    {filteredPujas.map(puja => (
+                                        <Link
+                                            to={`/puja/${puja.slug}`}
+                                            key={puja.id}
+                                            onClick={() => { setIsOpen(false); setHamburgerView('main'); setPujaSearch('') }}
+                                            style={{ 
+                                                display: 'flex', 
+                                                alignItems: 'center', 
+                                                gap: '0.5rem', 
+                                                padding: '0.4rem 0.5rem', 
+                                                borderRadius: '6px', 
+                                                background: 'rgba(255,255,255,0.85)', 
+                                                border: '1px solid rgba(212,175,55,0.2)',
+                                                textDecoration: 'none'
+                                            }}
+                                        >
+                                            <div style={{ fontSize: '1.2rem', color: '#5D1916', flexShrink: 0 }}>{puja.icon}</div>
+                                            <div style={{ flex: 1, minWidth: 0 }}>
+                                                <h4 style={{ margin: '0 0 0.1rem 0', fontSize: '0.7rem', color: '#5D1916', fontWeight: 'bold' }}>{puja.title}</h4>
+                                                <p style={{ margin: 0, fontSize: '0.55rem', color: '#777', lineHeight: '1.2' }}>{puja.desc}</p>
+                                            </div>
+                                        </Link>
+                                    ))}
+                                    {filteredPujas.length === 0 && (
+                                        <p style={{ textAlign: 'center', color: '#888', fontSize: '0.7rem', marginTop: '1rem' }}>No Pujas Found.</p>
+                                    )}
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -1119,10 +1119,14 @@
     padding-right: 4px;
 }
 
-.puja-mega-grid-items::-webkit-scrollbar { width: 6px; }
-.puja-mega-grid-items::-webkit-scrollbar-track { background: transparent; }
-.puja-mega-grid-items::-webkit-scrollbar-thumb { background-color: rgba(93,25,22,0.2); border-radius: 10px; }
-.puja-mega-grid-items::-webkit-scrollbar-thumb:hover { background-color: rgba(93,25,22,0.4); }
+.puja-mega-grid-items::-webkit-scrollbar,
+.mini-mega-scrollbar::-webkit-scrollbar { width: 6px; }
+.puja-mega-grid-items::-webkit-scrollbar-track,
+.mini-mega-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.puja-mega-grid-items::-webkit-scrollbar-thumb,
+.mini-mega-scrollbar::-webkit-scrollbar-thumb { background-color: rgba(93,25,22,0.2); border-radius: 10px; }
+.puja-mega-grid-items::-webkit-scrollbar-thumb:hover,
+.mini-mega-scrollbar::-webkit-scrollbar-thumb:hover { background-color: rgba(93,25,22,0.4); }
 
 /* Individual puja card */
 .puja-mega-item-card {
