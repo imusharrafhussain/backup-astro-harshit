@@ -213,12 +213,47 @@
     animation: npHeroNumberFloat 5.2s ease-in-out infinite;
 }
 
-.np-hero__number--1 { top: 12%; left: 8%; font-size: 1.2rem; animation-delay: 0s; }
-.np-hero__number--2 { top: 20%; left: 24%; font-size: 1.5rem; animation-delay: 0.6s; }
-.np-hero__number--3 { top: 16%; left: 76%; font-size: 1.1rem; animation-delay: 1.2s; }
-.np-hero__number--4 { top: 48%; left: 10%; font-size: 1.45rem; animation-delay: 1.8s; }
-.np-hero__number--5 { top: 56%; left: 38%; font-size: 1.25rem; animation-delay: 2.4s; }
-.np-hero__number--6 { top: 64%; left: 82%; font-size: 1.35rem; animation-delay: 3s; }
+.np-hero__number--1 {
+    top: 12%;
+    left: 8%;
+    font-size: 1.2rem;
+    animation-delay: 0s;
+}
+
+.np-hero__number--2 {
+    top: 20%;
+    left: 24%;
+    font-size: 1.5rem;
+    animation-delay: 0.6s;
+}
+
+.np-hero__number--3 {
+    top: 16%;
+    left: 76%;
+    font-size: 1.1rem;
+    animation-delay: 1.2s;
+}
+
+.np-hero__number--4 {
+    top: 48%;
+    left: 10%;
+    font-size: 1.45rem;
+    animation-delay: 1.8s;
+}
+
+.np-hero__number--5 {
+    top: 56%;
+    left: 38%;
+    font-size: 1.25rem;
+    animation-delay: 2.4s;
+}
+
+.np-hero__number--6 {
+    top: 64%;
+    left: 82%;
+    font-size: 1.35rem;
+    animation-delay: 3s;
+}
 
 .np-funnel-section {
     padding: clamp(2.2rem, 4vw, 3.2rem) 0;
@@ -279,11 +314,11 @@
     background: linear-gradient(118deg, rgba(212, 175, 55, 0.08), transparent 35%, transparent 65%, rgba(232, 98, 42, 0.09));
 }
 
-.np-form-card > *,
-.np-results-card > *,
-.np-unlock-card > *,
-.np-compat-card > *,
-.np-spin-card > * {
+.np-form-card>*,
+.np-results-card>*,
+.np-unlock-card>*,
+.np-compat-card>*,
+.np-spin-card>* {
     position: relative;
     z-index: 1;
 }
@@ -467,8 +502,8 @@
     transition: all 0.2s ease;
 }
 
-.np-field input:focus + span,
-.np-field input:not(:placeholder-shown) + span {
+.np-field input:focus+span,
+.np-field input:not(:placeholder-shown)+span {
     top: 0.34rem;
     transform: translateY(0);
     font-size: 0.68rem;
@@ -689,7 +724,7 @@
     margin: 0;
 }
 
-.np-compat-teaser p + p {
+.np-compat-teaser p+p {
     margin-top: 0.25rem;
 }
 
@@ -762,18 +797,38 @@
 }
 
 @keyframes npSpin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes npRibbonFloat {
-    0%, 100% { transform: rotate(-6deg) translate3d(0, 0, 0); }
-    50% { transform: rotate(-6deg) translate3d(0, -6px, 0); }
+
+    0%,
+    100% {
+        transform: rotate(-6deg) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: rotate(-6deg) translate3d(0, -6px, 0);
+    }
 }
 
 @keyframes npRibbonShine {
-    0%, 24% { transform: translateX(-70%) rotate(8deg); }
-    34%, 100% { transform: translateX(120%) rotate(8deg); }
+
+    0%,
+    24% {
+        transform: translateX(-70%) rotate(8deg);
+    }
+
+    34%,
+    100% {
+        transform: translateX(120%) rotate(8deg);
+    }
 }
 
 @keyframes npHeroFadeUp {
@@ -781,6 +836,7 @@
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -788,35 +844,483 @@
 }
 
 @keyframes npHeroPulse {
-    0%, 100% { box-shadow: 0 12px 28px rgba(34, 10, 10, 0.4), 0 0 0 rgba(255, 245, 225, 0); }
-    50% { box-shadow: 0 16px 30px rgba(34, 10, 10, 0.44), 0 0 24px rgba(255, 245, 225, 0.3); }
+
+    0%,
+    100% {
+        box-shadow: 0 12px 28px rgba(34, 10, 10, 0.4), 0 0 0 rgba(255, 245, 225, 0);
+    }
+
+    50% {
+        box-shadow: 0 16px 30px rgba(34, 10, 10, 0.44), 0 0 24px rgba(255, 245, 225, 0.3);
+    }
 }
 
 @keyframes npHeroNumberFloat {
-    0%, 100% { transform: translateY(0); opacity: 0.32; }
-    50% { transform: translateY(-14px); opacity: 0.62; }
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.32;
+    }
+
+    50% {
+        transform: translateY(-14px);
+        opacity: 0.62;
+    }
 }
 
 @keyframes npHeroCardFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-7px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
 }
 
 @keyframes npHeroShimmer {
-    0%, 18% { transform: translateX(-76%) rotate(8deg); }
-    28%, 100% { transform: translateX(125%) rotate(8deg); }
+
+    0%,
+    18% {
+        transform: translateX(-76%) rotate(8deg);
+    }
+
+    28%,
+    100% {
+        transform: translateX(125%) rotate(8deg);
+    }
 }
 
 @keyframes npHeroWave {
-    0% { transform: translateY(0) scale(1); opacity: 0.86; }
-    100% { transform: translateY(14px) scale(1.05); opacity: 1; }
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.86;
+    }
+
+    100% {
+        transform: translateY(14px) scale(1.05);
+        opacity: 1;
+    }
+}
+
+/* ── Info Section & Two-Panel Layout ── */
+.np-info-section {
+    background: var(--bg-cosmic);
+    padding: clamp(3rem, 8vw, 5.5rem) 0;
+}
+
+.np-info-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.np-heading-group {
+    text-align: center;
+    margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.np-heading-sub {
+    max-width: 680px;
+    margin: 0.75rem auto 0;
+    color: var(--text-muted);
+    font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+    line-height: 1.8;
+}
+
+.np-two-panel-row {
+    display: flex;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+    align-items: flex-start;
+}
+
+.np-left-panel {
+    flex: 0 0 72%;
+    position: relative;
+    max-width: 100%;
+}
+
+.np-img-wrap {
+    width: 100%;
+    aspect-ratio: 3/2;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #1a0a09;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.np-img-full {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.np-info-card {
+    position: absolute;
+    bottom: 1.5rem;
+    right: -1rem;
+    width: min(460px, 75%);
+    background: linear-gradient(135deg, rgba(10, 5, 5, 0.3), rgba(10, 5, 5, 0.1));
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 18px;
+    padding: clamp(1.2rem, 2.5vw, 1.8rem);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    z-index: 2;
+}
+
+.np-info-card-num {
+    display: inline-block;
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+}
+
+.np-info-card-icon {
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.np-info-card-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 2vw, 1.45rem);
+    color: #fff;
+    margin-bottom: 0.65rem;
+}
+
+.np-info-card-desc {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: clamp(0.85rem, 1.1vw, 0.9rem);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.np-right-panel {
+    flex: 0 0 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-sm);
+    background: var(--bg-card);
+}
+
+.np-list-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 1.2rem;
+    cursor: pointer;
+    background: var(--bg-card);
+    border-left: 4px solid transparent;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.np-list-item.is-active {
+    background: var(--bg-maroon);
+    border-left-color: var(--gold-primary);
+}
+
+.np-list-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    transition: filter 0.3s ease;
+}
+
+.np-list-item.is-active .np-list-icon {
+    filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.7));
+}
+
+.np-list-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    color: var(--text-heading);
+    letter-spacing: 0.02em;
+    transition: color 0.3s ease;
+}
+
+.np-list-item.is-active .np-list-label {
+    color: #fff;
+}
+
+/* ── Benefits Section ── */
+.np-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: clamp(1.2rem, 3vw, 1.8rem);
+    margin-top: clamp(2rem, 5vw, 3rem);
+}
+
+.np-benefit-card {
+    padding: clamp(1.8rem, 4vw, 2.5rem);
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.np-benefit-icon {
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
+    margin-bottom: 1rem;
+}
+
+.np-benefit-label {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+    color: var(--text-heading);
+}
+
+.np-benefit-text {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ── Specialist Section ── */
+.np-specialist-section {
+    padding: clamp(3.5rem, 8vw, 6rem) 0;
+    background: var(--bg-cosmic);
+}
+
+.np-specialist-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(2rem, 6vw, 4rem);
+    align-items: center;
+}
+
+.np-specialist-content h2 {
+    color: var(--text-heading);
+    margin-bottom: 1.2rem;
+    font-size: clamp(1.75rem, 3vw, 2.4rem);
+}
+
+.np-specialist-text {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.np-specialist-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.np-specialist-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.98rem;
+}
+
+.np-specialist-item span {
+    color: var(--gold-dark);
+    font-size: 1.1rem;
+}
+
+.np-testimonial-card {
+    padding: clamp(1.8rem, 4vw, 2.8rem);
+    border-left: 5px solid var(--gold-primary);
+    position: relative;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+}
+
+.np-quote-mark {
+    font-size: 3rem;
+    color: var(--gold-primary);
+    opacity: 0.4;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.np-testimonial-text {
+    font-style: italic;
+    color: var(--text-main);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+}
+
+.np-author {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.np-author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--maroon-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.np-author-name {
+    display: block;
+    color: var(--text-heading);
+    font-weight: 600;
+}
+
+.np-author-meta {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+}
+
+/* ── CTA Banner ── */
+.np-cta-banner {
+    background: var(--maroon-gradient);
+    padding: clamp(3.5rem, 10vw, 6rem) 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.np-cta-banner::before {
+    content: '0123456789';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25vw;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03);
+    letter-spacing: 0.1em;
+    pointer-events: none;
+    line-height: 1;
+}
+
+.np-cta-icon {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 1.2rem;
+    display: block;
+}
+
+.np-cta-title {
+    color: #fff;
+    font-size: clamp(1.8rem, 4.5vw, 3rem);
+    margin-bottom: 1.2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.np-cta-sub {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+    max-width: 620px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.75;
+}
+
+.np-fee-box {
+    display: inline-block;
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: var(--radius-md);
+    padding: clamp(1.2rem, 3vw, 1.8rem) clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 2.5rem;
+    backdrop-filter: blur(8px);
+}
+
+.np-fee-label {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+}
+
+.np-fee-amount {
+    color: var(--gold-light);
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.np-fee-note {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.82rem;
+    margin-top: 0.5rem;
+}
+
+.np-cta-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.np-cta-btn {
+    font-size: 1.1rem;
+    padding: 1rem 3rem;
+    min-width: 300px;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.np-cta-footer-text {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.88rem;
+}
+
+.np-cta-link {
+    color: var(--gold-light);
+    cursor: pointer;
+    text-decoration: underline;
+    transition: opacity 0.2s;
+}
+
+.np-cta-link:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+    .np-left-panel {
+        flex: 0 0 65%;
+    }
+
+    .np-right-panel {
+        flex: 0 0 32%;
+    }
 }
 
 @media (max-width: 900px) {
     .np-hero__container {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 1.25rem;
+        gap: 2.5rem;
+        padding-top: 4rem;
     }
 
     .np-hero__left {
@@ -841,54 +1345,119 @@
         grid-template-columns: 1fr;
     }
 
+    .np-funnel-bottom {
+        gap: 1.5rem;
+    }
+
     .np-ribbon {
         position: relative;
         left: 0;
         top: 0;
-        transform: none;
+        transform: rotate(-1deg);
         width: 100%;
-        margin-bottom: 0.8rem;
+        margin: 0 auto 1.5rem;
         animation: none;
-        clip-path: none;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
     .np-ribbon:hover {
-        transform: scale(1.02);
+        transform: rotate(0deg) scale(1.02);
     }
 
     .np-hero__right {
-        min-height: 320px;
+        min-height: auto;
+    }
+
+    .np-hero-card {
+        margin: 0 auto;
     }
 
     .np-hero__right-bg {
-        transform: translateY(22px);
+        transform: translate(0, 40px);
+        background-position: center bottom;
+        opacity: 0.4;
+    }
+
+    /* Two Panel Grid to Stack */
+    .np-two-panel-row {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .np-left-panel,
+    .np-right-panel {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .np-right-panel {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        flex-direction: row;
+        border-radius: 12px;
+    }
+
+    .np-list-item {
+        border-bottom: 1px solid var(--border-subtle);
+        border-right: 1px solid var(--border-subtle);
+    }
+
+    /* Specialist Grid to Stack */
+    .np-specialist-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .np-testimonial-card {
+        border-left: none;
+        border-top: 5px solid var(--gold-primary);
     }
 }
 
 @media (max-width: 640px) {
     .np-hero__container {
-        padding-top: 2.45rem;
-        padding-bottom: 2.1rem;
+        padding-top: 3rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .np-hero__left h1 {
+        font-size: clamp(2rem, 8vw, 2.75rem);
     }
 
     .np-hero__cta {
         width: 100%;
-        max-width: 290px;
+        max-width: none;
     }
 
     .np-hero-card {
         border-radius: 18px;
-        padding: 1rem;
-        animation-duration: 6.6s;
+        padding: 1.15rem;
     }
 
-    .np-hero__number {
-        animation-duration: 10s;
-        opacity: 0.14;
+    .np-info-card {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        margin-top: -1.5rem;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .np-img-wrap {
+        aspect-ratio: 3/2;
+    }
+
+    .np-right-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .np-list-item {
+        padding: 0.85rem 1rem;
     }
 
     .np-funnel-section {
-        padding: 2rem 0;
+        padding: 2.5rem 0;
     }
 
     .np-form-card,
@@ -897,12 +1466,46 @@
     .np-compat-card,
     .np-spin-card {
         border-radius: 16px;
-        padding: 0.92rem;
+        padding: 1.25rem;
     }
 
     .np-timer {
         position: sticky;
-        top: 72px;
-        z-index: 5;
+        top: 60px;
+        z-index: 10;
+        backdrop-filter: blur(8px);
+        margin-bottom: 1.2rem;
+    }
+
+    .np-main-number {
+        font-size: 2.5rem;
+    }
+
+    .np-visuals {
+        grid-template-columns: 1fr;
+    }
+
+    .np-fee-box {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .np-cta-btn {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .np-hero__kicker {
+        font-size: 0.7rem;
+    }
+
+    .np-hero__sub {
+        font-size: 0.95rem;
+    }
+
+    .np-teaser-item {
+        padding: 0.8rem;
     }
 }
