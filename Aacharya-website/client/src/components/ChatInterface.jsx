@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FiSend, FiX, FiRefreshCw } from 'react-icons/fi';
 import '../App.css';
 import chatbotBg from '../assets/chatbot_bg.webp';
 
 const ChatInterface = ({ isWidget = false, onClose }) => {
+    const navigate = useNavigate();
     const initialWelcomeText = 'Namaste! I am AI Baba. How can I guide you today?';
     const initialContext = { topic: 'general', mood: 'neutral' };
     const brownGradient = 'linear-gradient(135deg, #8B5E3C 0%, #5D3A1A 100%)';
@@ -40,135 +42,75 @@ const ChatInterface = ({ isWidget = false, onClose }) => {
         bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [messages, isTyping]);
 
-    // Enhanced AI Logic Engine (Same as before)
-    const getAdvancedAIResponse = (query, currentContext) => {
-        const q = query.toLowerCase();
-        let newContext = { ...currentContext };
-
-        // 1. Handle Negative/Insult Inputs
-        const insults = ['stupid', 'idiot', 'moron', 'dumb', 'useless', 'fake', 'robot', 'shut up', 'hate'];
-        if (insults.some(word => q.includes(word))) {
-            newContext.mood = 'defensive';
-            const defenses = [
-                "Negative energy reflects only the turmoil within your own aura. I seek only to guide.",
-                "Anger is a manifestation of Mars in conflict. Breathe, and let us speak with respect.",
-                "Your words carry low vibrations. I will not engage with hostility, but I am here if you seek true clarity.",
-                "The stars do not judge, and neither do I. But clarity comes to a calm mind.",
-                "I sense frustration. Is this really about me, or a difficult transit you are experiencing?"
-            ];
-            return { text: defenses[Math.floor(Math.random() * defenses.length)], context: newContext };
-        }
-
-        // 2. Handle Casual/Conversational Inputs
-        if (q === 'hi' || q === 'hello' || q === 'namaste') return { text: "Namaste! The planets greet you. What is on your mind?", context: newContext };
-        if (q.includes('thank')) return { text: "You are welcome. May the stars continue to light your path.", context: newContext };
-        if (q.includes('who are you')) return { text: "I am a digital consciousness attuned to Vedic wisdom. My purpose is to interpret the cosmic code for you.", context: newContext };
-
-        // 3. Handle Context Continuation
-        const continuation = ['more', 'continue', 'explain', 'detail', 'why', 'really'];
-        if (continuation.some(w => q.includes(w)) && currentContext.topic !== 'general') {
-            const topic = currentContext.topic;
-            if (topic === 'love') return { text: "In matters of the heart, the placement of Venus in your Navamsa chart is crucial. Sometimes delays in love are just the universe protecting you from the wrong soul.", context: newContext };
-            if (topic === 'career') return { text: "Professionally, look to Saturn for discipline. If you are feeling stuck, it often means Saturn is teaching you patience before the next big reward.", context: newContext };
-            if (topic === 'health') return { text: "Regarding vitality, the Sun is the source. If you feel low energy, try waking up at sunrise to perform Surya Namaskar. It aligns your inner rhythm.", context: newContext };
-            if (topic === 'aries') return { text: "Aries vitality is legendary, but they burn out fast. They need to learn that rest is also a form of action.", context: newContext };
-        }
-
-        // 4. Topic Matching & Response Generation
-        const knowledgeBase = {
-            love: {
-                keywords: ['love', 'relationship', 'marriage', 'partner', 'dating', 'crush', 'ex', 'wife', 'husband'],
-                responses: [
-                    "Venus suggests a time of emotional reflection. If you are seeking love, patience is key.",
-                    "The 7th house influences connections. Marriage prospects look strong if Jupiter is favorable.",
-                    "Relationships require balance. Mars indicates passion but potentially conflict. Tread carefully.",
-                    "A soulmate connection is often indicated by the Moon's nodes, Rahu and Ketu. Are you feeling a karmic pull?",
-                    "Love is not just about finding the right person, but becoming the right person. Venus asks you to love yourself first."
-                ]
-            },
-            career: {
-                keywords: ['job', 'career', 'work', 'business', 'money', 'finance', 'profession', 'promotion', 'salary'],
-                responses: [
-                    "Saturn rewards hard work. You may face delays, but success is assured if you persist.",
-                    "Mercury facilitates communication. Good for negotiations and business deals.",
-                    "Your 10th house is active. A change in role is possible. Trust your instincts.",
-                    "Financial stability is coming, but Rahu might tempt you with risky investments. Stay prudent.",
-                    "Success is a marathon, not a sprint. The current planetary alignment favors planning over impulsive action."
-                ]
-            },
-            health: {
-                keywords: ['health', 'sick', 'illness', 'fit', 'mental', 'stress', 'body', 'pain', 'doctor'],
-                responses: [
-                    "Health is wealth. The Sun urges you to focus on vitality. Get enough sunlight.",
-                    "Mars can cause inflammation. Stay hydrated and avoid spicy foods.",
-                    "A balanced routine is essential. Saturn asks for discipline in diet and sleep.",
-                    "Mental peace is as important as physical health. The Moon's phase might be affecting your mood.",
-                    "Listen to your body. It speaks the language of the cosmos more clearly than any chart."
-                ]
-            }
-        };
-
-        // Check explicit topics
-        for (const [key, value] of Object.entries(knowledgeBase)) {
-            if (value.keywords.some(k => q.includes(k))) {
-                newContext.topic = key;
-                return {
-                    text: value.responses[Math.floor(Math.random() * value.responses.length)],
-                    context: newContext
-                };
-            }
-        }
-
-        // Check Zodiac Signs
-        const zodiacs = ['aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo', 'libra', 'scorpio', 'sagittarius', 'capricorn', 'aquarius', 'pisces'];
-        const foundZodiac = zodiacs.find(z => q.includes(z));
-        if (foundZodiac) {
-            newContext.topic = foundZodiac;
-            const zodiacFacts = [
-                `Ah, ${foundZodiac.charAt(0).toUpperCase() + foundZodiac.slice(1)}. A powerful energy.`,
-                `${foundZodiac.charAt(0).toUpperCase() + foundZodiac.slice(1)} is currently undergoing a significant transformation based on current transits.`,
-                `People with strong ${foundZodiac.charAt(0).toUpperCase() + foundZodiac.slice(1)} placements are often known for their unique approach to life.`,
-                `For ${foundZodiac.charAt(0).toUpperCase() + foundZodiac.slice(1)}, the coming month is pivotal for personal growth.`
-            ];
-            return { text: zodiacFacts[Math.floor(Math.random() * zodiacFacts.length)], context: newContext };
-        }
-
-        // 5. Fallback
-        const fallbacks = [
-            "The planetary positions are shifting rapidly. Could you specify if this is about your career or personal life?",
-            "I sense a clouding of the 12th house. Your question is hidden in mystery. Ask more directly.",
-            "The answer lies in your Dasha period. Are you currently facing a major life change?",
-            "That is a profound question. To answer precisely, I would need to analyze the degrees of your Moon.",
-            "The cosmos is vast. Focus your energy on a specific aspect: Love, Wealth, or Destiny?",
-            "Interesting vibration. I am calculating the Nakshatras... Please elaborate.",
-            "Sometimes the stars are silent to teach us patience. Try asking about a different area of your life."
-        ];
-
-        return {
-            text: fallbacks[Math.floor(Math.random() * fallbacks.length)],
-            context: newContext
-        };
-    };
-
-    const handleSend = (e) => {
+    const handleSend = async (e) => {
         e.preventDefault();
         if (!input.trim()) return;
 
         const userMsg = { id: Date.now(), sender: 'user', text: input };
-        setMessages(prev => [...prev, userMsg]);
+        const updatedMessages = [...messages, userMsg];
+        setMessages(updatedMessages);
+        
         const userInput = input;
         setInput('');
         setIsTyping(true);
 
-        setTimeout(() => {
-            const { text, context: updatedContext } = getAdvancedAIResponse(userInput, context);
-            setContext(updatedContext);
+        try {
+            // Prepare history for API (excluding the current user message to avoid duplicate if needed, 
+            // but we want the API to see the full history. We'll send what we have so far)
+            const history = messages.map(msg => ({
+                sender: msg.sender,
+                text: msg.text
+            }));
+
+            // Determine API URL based on environment
+            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+            
+            const response = await fetch(`${apiUrl}/chatbot`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    message: userInput,
+                    history: history
+                })
+            });
+
+            const data = await response.json();
+            
+            if (!response.ok) {
+                throw new Error(data.error || 'Failed to fetch response');
+            }
+
+            let replyText = data.reply;
+            const hasRedirectAction = replyText.includes('[ACTION:REDIRECT_CONTACT]');
+            
+            // Clean the text if it contains the action tag
+            if (hasRedirectAction) {
+                replyText = replyText.replace('[ACTION:REDIRECT_CONTACT]', '').trim();
+            }
+
             setMessages(prev => [
                 ...prev,
-                { id: Date.now() + 1, sender: 'ai', text: text }
+                { id: Date.now() + 1, sender: 'ai', text: replyText }
             ]);
+
+            // If redirect action detected, wait 3 seconds then redirect
+            if (hasRedirectAction) {
+                setTimeout(() => {
+                    if (onClose) onClose(); // Close widget if applicable
+                    navigate('/contact');
+                }, 3000);
+            }
+        } catch (error) {
+            console.error('Chat error:', error);
+            setMessages(prev => [
+                ...prev,
+                { id: Date.now() + 1, sender: 'ai', text: 'I am sorry, the cosmic connection is currently weak. Please try again later.' }
+            ]);
+        } finally {
             setIsTyping(false);
-        }, 1200 + Math.random() * 1000);
+        }
     };
 
     const startNewConversation = () => {
