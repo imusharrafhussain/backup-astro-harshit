@@ -60,12 +60,11 @@
 .bk-modal.inline {
   max-width: 100%;
   max-height: none;
-  box-shadow: 0 12px 40px rgba(93, 25, 22, 0.08), 0 0 0 1px rgba(0,0,0,0.03);
+  box-shadow: none;
   animation: none;
   margin: 0 auto;
-  border: 2px solid #D4AF37;
-  border-radius: 24px;
-  overflow: hidden;
+  border: none;
+  border-radius: 0;
 }
 @keyframes bkSlideUp {
   from { opacity: 0; transform: translateY(24px) scale(0.97); }
