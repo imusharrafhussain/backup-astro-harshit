@@ -361,13 +361,11 @@ function SlotPicker({ onConfirm }) {
                   className={`bk-slot ${locked ? 'locked' : ''} ${selected ? 'selected' : ''}`}
                 >
                   <span className="bk-slot-time">{s.label}</span>
-                  <span className="bk-slot-badge">
-                    {locked ? (
-                      <><span className="bk-lock-icon">🔒</span> Booked</>
-                    ) : (
-                      <span className="bk-left">{left} left</span>
-                    )}
-                  </span>
+                  {locked && (
+                    <span className="bk-slot-badge">
+                      <span className="bk-lock-icon">🔒</span> Booked
+                    </span>
+                  )}
                 </button>
               );
             })}
