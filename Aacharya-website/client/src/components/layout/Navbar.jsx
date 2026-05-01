@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useMemo } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { FiMenu, FiX, FiChevronDown, FiPhone, FiVideo, FiUser, FiHome, FiBookOpen, FiArchive, FiShoppingCart, FiSun, FiSearch, FiChevronRight } from 'react-icons/fi'
+import { FiMenu, FiX, FiChevronDown, FiPhone, FiVideo, FiUser, FiHome, FiBookOpen, FiArchive, FiShoppingCart, FiSun, FiSearch, FiChevronRight, FiMessageSquare, FiHash, FiCreditCard } from 'react-icons/fi'
+import { Bs123 } from 'react-icons/bs'
 import { GiSunrise, GiMoon, GiMaceHead, GiBookAura, GiScrollUnfurled, GiLotusFlower, GiCrowDive, GiCobra, GiSnake, GiCircleSparks, GiAries, GiTaurus, GiGemini, GiCancer, GiLeo, GiVirgo, GiLibra, GiScorpio, GiSagittarius, GiCapricorn, GiAquarius, GiPisces, GiBarefoot, GiCoins, GiElephantHead, GiTargetPrize, GiGoldNuggets, GiScales, GiLoveMystery, GiLovers, GiHeartBeats, GiScrollQuill, GiHealing, GiHourglass, GiTrident, GiEvilEyes, GiShield, GiVortex, GiSnakeSpiral, GiCandleLight, GiFireBowl, GiRaven, GiEclipse, GiMusicalScore } from 'react-icons/gi'
 import logo from '../../assets/logo.svg'
 import megaKundliMatching from '../../assets/mega_kundli_matching.webp'
@@ -558,6 +559,9 @@ export default function Navbar() {
                         <NavLink to="/reports" className={({ isActive }) => `hamburger-link${isActive ? ' active' : ''}`} onClick={() => setIsOpen(false)}>Reports</NavLink>
                         <NavLink to="/blog" className={({ isActive }) => `hamburger-link${isActive ? ' active' : ''}`} onClick={() => setIsOpen(false)}>Blog</NavLink>
                         <NavLink to="/about" className={({ isActive }) => `hamburger-link${isActive ? ' active' : ''}`} onClick={() => setIsOpen(false)}>About Us</NavLink>
+                        <NavLink to="/learning" className={({ isActive }) => `hamburger-link${isActive ? ' active' : ''}`} onClick={() => setIsOpen(false)}><FiBookOpen /> Digital Learning</NavLink>
+                        <NavLink to="/mandir" className={({ isActive }) => `hamburger-link${isActive ? ' active' : ''}`} onClick={() => setIsOpen(false)}><FiArchive /> Digital Mandir</NavLink>
+                        <NavLink to="/mart" className={({ isActive }) => `hamburger-link${isActive ? ' active' : ''}`} onClick={() => setIsOpen(false)}><FiShoppingCart /> Digital Mart</NavLink>
                         <button className="hamburger-link" onClick={() => { setShowComingSoon(true); setIsOpen(false) }}><FiPhone /> Talk to AstroHarshit Ji</button>
                         <button className="hamburger-link" onClick={() => { setShowComingSoon(true); setIsOpen(false) }}><FiVideo /> Get Live Consultation</button>
                         <NavLink to="/contact" className={({ isActive }) => `hamburger-link${isActive ? ' active' : ''}`} onClick={() => setIsOpen(false)}>Contact Us</NavLink>
@@ -606,17 +610,17 @@ export default function Navbar() {
                 <FiHome className="mobile-tab-icon" />
                 <span>Home</span>
             </NavLink>
-            <NavLink to="/learning" className={({ isActive }) => `mobile-tab-link ${isActive ? 'active' : ''}`}>
+            <NavLink to="/book" className={({ isActive }) => `mobile-tab-link ${isActive ? 'active' : ''}`}>
+                <FiMessageSquare className="mobile-tab-icon" />
+                <span>Consultation</span>
+            </NavLink>
+            <NavLink to="/numerology" className={({ isActive }) => `mobile-tab-link ${isActive ? 'active' : ''}`}>
+                <Bs123 className="mobile-tab-icon" />
+                <span>Numerology</span>
+            </NavLink>
+            <NavLink to="/reports" className={({ isActive }) => `mobile-tab-link ${isActive ? 'active' : ''}`}>
                 <FiBookOpen className="mobile-tab-icon" />
-                <span>Digital Learning</span>
-            </NavLink>
-            <NavLink to="/mandir" className={({ isActive }) => `mobile-tab-link ${isActive ? 'active' : ''}`}>
-                <FiArchive className="mobile-tab-icon" />
-                <span>Digital Mandir</span>
-            </NavLink>
-            <NavLink to="/mart" className={({ isActive }) => `mobile-tab-link ${isActive ? 'active' : ''}`}>
-                <FiShoppingCart className="mobile-tab-icon" />
-                <span>Digital Mart</span>
+                <span>Reports</span>
             </NavLink>
             <button
                 className={`mobile-tab-link ${(isPujaOpen || (isOpen && hamburgerView === 'puja')) ? 'active' : ''}`}
