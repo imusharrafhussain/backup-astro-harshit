@@ -243,6 +243,90 @@
   margin: 0;
 }
 
+/* ── Custom Select ── */
+.bk-custom-select {
+  position: relative;
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--bk-border);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--bk-text);
+  background: var(--bk-bg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: var(--bk-transition);
+  box-sizing: border-box;
+}
+.bk-custom-select.open {
+  border-color: var(--bk-gold);
+  box-shadow: 0 0 0 3px rgba(212,175,55,0.15);
+  background: var(--bk-white);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.bk-custom-select.error {
+  border-color: var(--bk-error);
+}
+.bk-placeholder {
+  color: var(--bk-muted-fg);
+}
+.bk-custom-select-arrow {
+  font-size: 0.7rem;
+  color: var(--bk-muted-fg);
+  transition: var(--bk-transition);
+}
+.bk-custom-select.open .bk-custom-select-arrow {
+  transform: rotate(180deg);
+}
+.bk-custom-select-dropdown {
+  position: absolute;
+  top: 100%;
+  left: -1.5px;
+  right: -1.5px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid var(--bk-gold);
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  max-height: 220px;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+  scrollbar-width: thin;
+  scrollbar-color: var(--bk-gold) transparent;
+}
+.bk-custom-select-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+.bk-custom-select-dropdown::-webkit-scrollbar-track {
+  background: transparent;
+}
+.bk-custom-select-dropdown::-webkit-scrollbar-thumb {
+  background: var(--bk-gold);
+  border-radius: 10px;
+}
+.bk-custom-select-option {
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  color: var(--bk-text);
+  transition: var(--bk-transition);
+}
+.bk-custom-select-option:hover {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--bk-maroon);
+}
+.bk-custom-select-option.selected {
+  background: rgba(212, 175, 55, 0.25);
+  color: var(--bk-maroon-deep);
+  font-weight: 600;
+}
+
 /* ── Buttons ── */
 .bk-btn-primary {
   width: 100%;

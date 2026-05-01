@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import './BookingDialog.css';
 
@@ -158,6 +158,18 @@ function DetailsForm({ defaultValues, onSubmit }) {
   });
   const [errors, setErrors] = useState({});
   const [submitting, setSubmitting] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const validate = () => {
     const e = {};
@@ -227,19 +239,39 @@ function DetailsForm({ defaultValues, onSubmit }) {
         {errors.address && <p className="bk-error">{errors.address}</p>}
       </div>
       
-      <div className="bk-field">
+      <div className="bk-field" ref={dropdownRef}>
         <label className="bk-label" htmlFor="service">
           <span className="bk-label-icon">🕉️</span> Select Service
         </label>
-        <select
-          id="service"
-          value={values.service}
-          onChange={ev => setValues(v => ({ ...v, service: ev.target.value }))}
-          className={`bk-input ${errors.service ? 'error' : ''}`}
+        <div 
+          className={`bk-custom-select ${errors.service ? 'error' : ''} ${isDropdownOpen ? 'open' : ''}`}
+          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
         >
-          <option value="">Choose a service...</option>
-          {SERVICE_OPTIONS.map(s => <option key={s} value={s}>{s}</option>)}
-        </select>
+          <div className="bk-custom-select-value">
+            {values.service || <span className="bk-placeholder">Choose a service...</span>}
+          </div>
+          <span className="bk-custom-select-arrow">▼</span>
+          
+          {isDropdownOpen && (
+            <div className="bk-custom-select-dropdown">
+              <div 
+                className={`bk-custom-select-option ${!values.service ? 'selected' : ''}`}
+                onClick={() => setValues(v => ({ ...v, service: '' }))}
+              >
+                Choose a service...
+              </div>
+              {SERVICE_OPTIONS.map(s => (
+                <div 
+                  key={s} 
+                  className={`bk-custom-select-option ${values.service === s ? 'selected' : ''}`}
+                  onClick={() => setValues(v => ({ ...v, service: s }))}
+                >
+                  {s}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
         {errors.service && <p className="bk-error">{errors.service}</p>}
       </div>
 
