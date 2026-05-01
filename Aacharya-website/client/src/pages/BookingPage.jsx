@@ -4,12 +4,7 @@ import './BookingPage.css'
 export default function BookingPage() {
     return (
         <div className="booking-page page-wrapper">
-            <div className="page-header">
-                <h1>Book a <span className="gold-text">Consultation</span></h1>
-                <p>Schedule your personalized session with our Vedic astrology experts.</p>
-            </div>
-
-            <section className="section">
+            <section className="section" style={{ paddingTop: '2rem' }}>
                 <div className="container booking-container">
                     <div className="booking-form-inline-container">
                         <BookingDialog inline={true} open={true} serviceLabel="Book a Consultation" />
