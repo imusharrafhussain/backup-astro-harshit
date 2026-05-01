@@ -474,7 +474,7 @@ export default function Navbar() {
                                             color: '#5D1916',
                                             border: 'none',
                                             borderLeft: pujaCategory === cat.id ? '3px solid #D4AF37' : '3px solid transparent',
-                                            fontWeight: pujaCategory === cat.id ? 'bold' : 'normal',
+                                            fontWeight: 'bold',
                                             display: 'flex',
                                             justifyContent: 'space-between',
                                             alignItems: 'center',
