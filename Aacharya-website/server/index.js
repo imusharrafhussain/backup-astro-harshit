@@ -89,3 +89,4 @@ Promise.all([connectDB(), initCacheClient()]).then(() => {
         console.log(`📡 API: http://localhost:${PORT}/api/health`);
     });
 });
+
