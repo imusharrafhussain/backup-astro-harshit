@@ -125,12 +125,35 @@ function MiniCalendar({ selected, onSelect }) {
 }
 
 // ─── Step 1: Details Form ──────────────────────────────────────────────
+const SERVICE_OPTIONS = [
+  'Vedic Birth Chart Analysis',
+  'Relationship & Compatibility Reading',
+  'Career & Finance Forecast',
+  'Numerology Life Path Reading',
+  'Business Name Numerology',
+  'Vastu Home Consultation',
+  'Vastu Office & Commercial',
+  'Gemstone Recommendation',
+  'Spiritual Healing Session',
+  'Puja & Ritual Guidance',
+  'Business Consultation',
+  'Love Report',
+  'Health Consultation',
+  'Career Consultation',
+  'Marriage Consultation',
+  'Education Consultation',
+  'Finance Consultation',
+  'Pregnancy Consultation',
+  'Legal Consultation'
+];
+
 function DetailsForm({ defaultValues, onSubmit }) {
   const [values, setValues] = useState({
     fullName: defaultValues?.fullName || '',
     phone: defaultValues?.phone || '',
     email: defaultValues?.email || '',
     address: defaultValues?.address || '',
+    service: defaultValues?.service || '',
     subject: defaultValues?.subject || '',
   });
   const [errors, setErrors] = useState({});
@@ -146,6 +169,8 @@ function DetailsForm({ defaultValues, onSubmit }) {
       e.email = 'Enter a valid email address';
     if (!values.address.trim() || values.address.trim().length < 8)
       e.address = 'Please share a complete address';
+    if (!values.service)
+      e.service = 'Please select a service';
     return e;
   };
 
@@ -201,6 +226,23 @@ function DetailsForm({ defaultValues, onSubmit }) {
         />
         {errors.address && <p className="bk-error">{errors.address}</p>}
       </div>
+      
+      <div className="bk-field">
+        <label className="bk-label" htmlFor="service">
+          <span className="bk-label-icon">🕉️</span> Select Service
+        </label>
+        <select
+          id="service"
+          value={values.service}
+          onChange={ev => setValues(v => ({ ...v, service: ev.target.value }))}
+          className={`bk-input ${errors.service ? 'error' : ''}`}
+        >
+          <option value="">Choose a service...</option>
+          {SERVICE_OPTIONS.map(s => <option key={s} value={s}>{s}</option>)}
+        </select>
+        {errors.service && <p className="bk-error">{errors.service}</p>}
+      </div>
+
       {field('subject', 'Subject of Consultation', '✨', 'text', 'e.g. Career, Marriage, Health…', true)}
 
       <button type="submit" className="bk-btn-primary" disabled={submitting}>
