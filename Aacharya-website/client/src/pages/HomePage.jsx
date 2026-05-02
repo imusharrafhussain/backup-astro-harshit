@@ -347,12 +347,12 @@ export default function HomePage() {
             <section className="hero-section">
                 <div className="hero-container hero-container--full">
                     <div className="hero-content">
-                        <div className="hero-badge animate-in">
+                        <div className="hero-badge fade-in-up">
                             <span aria-hidden="true">🔱</span> India&apos;s Most Trusted Vedic Astrologer
                         </div>
                         <ScaleLetterHeading
                             as="h1"
-                            className="hero-solid-title animate-in"
+                            className="hero-solid-title fade-in-up"
                             style={{ animationDelay: '0.1s' }}
                             parts={[
                                 { text: 'Unlock Your ' },
@@ -360,7 +360,7 @@ export default function HomePage() {
                             ]}
                         />
                         {/* Mobile-only astrologer image — sits between title and focus/message */}
-                        <div className="hero-mobile-visual animate-in" style={{ animationDelay: '0.12s', position: 'relative' }} aria-hidden="true">
+                        <div className="hero-mobile-visual fade-in-up" style={{ animationDelay: '0.12s', position: 'relative' }} aria-hidden="true">
                             <HeroFloatingBadges />
                             <img
                                 src={harshitHeroImg}
@@ -372,7 +372,7 @@ export default function HomePage() {
                                 draggable={false}
                             />
                         </div>
-                        <div className="hero-focus-block animate-in" style={{ animationDelay: '0.15s' }}>
+                        <div className="hero-focus-block fade-in-up" style={{ animationDelay: '0.15s' }}>
                             <span className="hero-focus-label">Focus:</span>
                             <div className="hero-focus-line" aria-label="Key focus areas">
                                 {visibleFocusFeatures.map((feature) => (
@@ -382,7 +382,7 @@ export default function HomePage() {
                                 ))}
                             </div>
                         </div>
-                        <div className="hero-message animate-in" style={{ animationDelay: '0.2s' }}>
+                        <div className="hero-message fade-in-up" style={{ animationDelay: '0.2s' }}>
                             <p className="hero-message-lead">
                                 India&apos;s Most Trusted Vedic Astrologer for Life &amp; Business Decisions
                             </p>
@@ -391,11 +391,11 @@ export default function HomePage() {
                                 insights.
                             </p>
                         </div>
-                        <p className="hero-authority animate-in" style={{ animationDelay: '0.24s' }}>
+                        <p className="hero-authority fade-in-up" style={{ animationDelay: '0.24s' }}>
                             Trusted by 500+ Business Leaders, Celebrities & Government Officials
                         </p>
                         <div
-                            className="hero-proof-marquee animate-in"
+                            className="hero-proof-marquee fade-in-up"
                             style={{ animationDelay: '0.28s' }}
                             aria-hidden="true"
                         >
@@ -414,7 +414,7 @@ export default function HomePage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="hero-actions animate-in" style={{ animationDelay: '0.3s' }}>
+                        <div className="hero-actions fade-in-up" style={{ animationDelay: '0.3s' }}>
                             <Link to="/book" className="btn btn-primary">
                                 Get Your Reading <FiArrowRight />
                             </Link>
@@ -422,12 +422,12 @@ export default function HomePage() {
                                 View Sample Report
                             </Link>
                         </div>
-                        <p className="hero-note animate-in" style={{ animationDelay: '0.4s' }}>
+                        <p className="hero-note fade-in-up" style={{ animationDelay: '0.4s' }}>
                             <FiStar className="text-gold" /> No birth time? We can help rectify it.
                         </p>
                     </div>
 
-                    <div className="hero-right-visual animate-in" style={{ animationDelay: '0.5s' }}>
+                    <div className="hero-right-visual fade-in-up" style={{ animationDelay: '0.5s' }}>
                         <img
                             src={harshitHeroImg}
                             alt="Harshit Rajveer"

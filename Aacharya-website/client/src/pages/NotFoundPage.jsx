@@ -5,7 +5,7 @@ import { FiHome, FiArrowLeft } from 'react-icons/fi'
 export default function NotFoundPage() {
     return (
         <div className="page-wrapper">
-            <div className="container not-found-container animate-in">
+            <div className="container not-found-container fade-in-up">
                 <h1 className="error-code">404</h1>
                 <h2 className="text-gold">Page Not Found</h2>
                 <p className="text-muted" style={{ maxWidth: '400px', margin: '1rem auto 2rem' }}>

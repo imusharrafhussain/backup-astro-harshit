@@ -8,6 +8,8 @@ import { AuthProvider } from './context/AuthContext'
 
 import FloatingChatbot from './components/FloatingChatbot'
 
+import ErrorBoundary from './components/ErrorBoundary'
+
 const HomePage = lazy(() => import('./pages/HomePage'))
 const AboutPage = lazy(() => import('./pages/AboutPage'))
 const ServicesPage = lazy(() => import('./pages/ServicesPage'))
@@ -104,9 +106,10 @@ function App() {
             <Navbar />
             <FloatingChatbot />
             <main>
-                <Suspense fallback={null}>
-                    <Routes>
-                        <Route path="/" element={<HomePage />} />
+                <ErrorBoundary>
+                    <Suspense fallback={null}>
+                        <Routes>
+                            <Route path="/" element={<HomePage />} />
                         <Route path="/about" element={<AboutPage />} />
                         <Route path="/services" element={<ServicesPage />} />
                         <Route path="/services/kundli-matching" element={<KundliMatchingPage />} />
@@ -194,7 +197,8 @@ function App() {
                         <Route path="/signup" element={<SignupPage />} />
                         <Route path="*" element={<NotFoundPage />} />
                     </Routes>
-                </Suspense>
+                    </Suspense>
+                </ErrorBoundary>
             </main>
 
             <Footer />

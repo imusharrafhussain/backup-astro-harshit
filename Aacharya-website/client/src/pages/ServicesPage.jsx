@@ -66,7 +66,7 @@ export default function ServicesPage() {
                     ) : (
                         <div className="grid-3">
                             {services.map((s, i) => (
-                                <div key={s._id || i} className="glass-card service-card animate-in" style={{ animationDelay: `${i * 0.08}s` }}>
+                                <div key={s._id || i} className="glass-card service-card fade-in-up" style={{ animationDelay: `${i * 0.08}s` }}>
                                     {s.featured && <div className="service-badge">Featured</div>}
                                     <div className="service-card-icon">{s.icon}</div>
                                     <h3>{s.title}</h3>

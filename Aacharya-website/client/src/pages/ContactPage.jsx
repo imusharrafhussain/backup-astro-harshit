@@ -46,7 +46,7 @@ export default function ContactPage() {
     return (
         <div className="contact-page page-wrapper">
             <div className="container">
-                <div className="contact-header text-center animate-in">
+                <div className="contact-header text-center fade-in-up">
                     <h1 className="section-title">Get in Touch</h1>
                     <p className="section-subtitle">
                         Have questions about our services or your reading? We're here to help.
@@ -56,7 +56,7 @@ export default function ContactPage() {
 
                 <div className="contact-grid">
                     {/* Contact Info */}
-                    <div className="contact-info glass-panel animate-in" style={{ animationDelay: '0.1s' }}>
+                    <div className="contact-info glass-panel fade-in-up" style={{ animationDelay: '0.1s' }}>
                         <h3>Contact Information</h3>
                         <p className="text-muted">Reach out to us directly or fill out the form.</p>
 
@@ -86,7 +86,7 @@ export default function ContactPage() {
                     </div>
 
                     {/* Contact Form */}
-                    <div className="contact-form-container glass-panel animate-in" style={{ animationDelay: '0.2s' }}>
+                    <div className="contact-form-container glass-panel fade-in-up" style={{ animationDelay: '0.2s' }}>
                         <form onSubmit={handleSubmit} className="contact-form">
                             <div className="form-group">
                                 <label htmlFor="name">Your Name</label>

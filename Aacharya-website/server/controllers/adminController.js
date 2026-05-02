@@ -14,7 +14,7 @@ function getAdminSecret() {
 
 function signAdminToken(email) {
   const secret = getAdminSecret();
-  return jwt.sign({ role: 'admin', email }, secret, { expiresIn: '12h' });
+  return jwt.sign({ role: 'admin', email }, secret, { expiresIn: '7d' });
 }
 
 function assertDbConnected() {
@@ -174,6 +174,7 @@ exports.listRecords = async (req, res, next) => {
 
     return res.status(400).json({ success: false, error: 'Unknown category' });
   } catch (err) {
+    console.error('[ADMIN CONTROLLER ERROR]:', err);
     return next(err);
   }
 };
